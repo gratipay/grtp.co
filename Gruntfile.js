@@ -47,6 +47,15 @@ module.exports = function(grunt) {
 			}
 		},
 
+		minjson: {
+			dist: {
+				expand: true,
+				cwd: 'lib/',
+				src: '**/*.json',
+				dest: 'dist/'
+			}
+		},
+
 		jshint: {
 			gruntfile: 'Gruntfile.js',
 			dist: 'lib/**/*.{js,json}',
@@ -76,6 +85,7 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-minjson');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -83,6 +93,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// Default task.
-	grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'uglify', 'minjson']);
 	grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
