@@ -93,6 +93,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// Default task.
-	grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'uglify', 'minjson']);
+	grunt.registerTask('default', ['test', 'minify']);
+	grunt.registerTask('minify', ['uglify', 'minjson']);
 	grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
