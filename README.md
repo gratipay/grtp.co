@@ -1,14 +1,10 @@
 # gttp.co
 
-The best project ever.
+Gittip widgets + widget API
 
 ## Getting Started
-Install the module with: `npm install gttp.co`
+_(Coming soon)_
 
-```javascript
-var gttp_co = require('gttp.co');
-gttp_co.awesome(); // "awesome"
-```
 
 ## Documentation
 _(Coming soon)_
