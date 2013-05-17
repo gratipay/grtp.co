@@ -1,3 +1,3 @@
-var Core = require('aspen/Core.js'),
+var Core = require('aspen/.aspen/Core.js'),
     core = new Core();
 
