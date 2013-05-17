@@ -1,0 +1,43 @@
+{
+	"style": [
+		[".gittip-widget", {
+			"font": "normal 9pt/12pt Lato, sans-serif",
+			"color": "#614C3E",
+			"width": "84pt",
+			"display": "inline-block",
+			"border": "2px solid #614C3E",
+			"border-radius": "6pt",
+			"background": "white url(//gttp.co/v1/heart.gif) 64pt 31pt no-repeat",
+			"text-align": "left"
+		}],
+
+		[".gittip-widget .gittip-inner", {
+			"display": "block",
+			"padding": "6pt 0 6pt 9pt"
+		}],
+
+		[".gittip-widget a", {
+			"color": "#2A8F79"
+		}],
+
+		[".gittip-widget b", {
+			"font-size": "12pt",
+			"line-height": "14pt"
+		}],
+
+		"@import url(//fonts.googleapis.com/css?family=Lato:300,900)"
+	],
+
+	"widget": [
+		["div", { "class": "gittip-widget" },
+			["div", { "class": "gittip-inner" },
+				"I receive ", ["br"],
+				["a", { "class": "gittip-profile-link" },
+					["b", { "class": "gittip-receiving" }, "$0.00"], " / wk"
+				],
+				["br"],
+				" on ", ["a", { "class": "gittip-link" }, "Gittip"], "."
+			]
+		]
+	]
+}
