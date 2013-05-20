@@ -5,8 +5,8 @@ Gittip widgets + widget API
 ## Getting Started
 
 ```
-$ git clone ...
-$ cd ...
+$ git clone git@github.com:gittip/gttp.co.git
+$ cd gttp.co
 $ npm install
 $ node start.js
 ```
