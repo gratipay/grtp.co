@@ -78,8 +78,10 @@ module.exports = function(grunt) {
 				browser: true,
 
 				globals: {
-					_gittip: true,
-					Gittip: true
+					Gittip: true,
+
+					// JSHint doesn't like XDomainRequest otherwise
+					XDomainRequest: true
 				}
 			}
 		}
