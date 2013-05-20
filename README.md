@@ -1,3 +1,5 @@
+[![Testing](https://secure.travis-ci.org/gittip/gttp.co.png)](http://travis-ci.org/gittip/gttp.co)
+
 # gttp.co
 
 Gittip widgets + widget API
