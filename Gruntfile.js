@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: 'lib/',
 				src: '**/*.js',
-				dest: 'dist/'
+				dest: 'www/'
 			}
 		},
 
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: 'lib/',
 				src: '**/*.json',
-				dest: 'dist/'
+				dest: 'www/'
 			}
 		},
 
