@@ -17,18 +17,19 @@
 		}],
 
 		[".gittip-widget a", {
-			"color": "#2A8F79"
+			"color": "#2A8F79",
+			"text-decoration": "none",
+			"font-weight": "bold"
 		}],
 
 		[".gittip-widget b", {
 			"font-size": "12pt",
 			"line-height": "14pt"
-		}],
-
-		"@import url(//fonts.googleapis.com/css?family=Lato:300,900)"
+		}]
 	],
 
 	"widget": [
+		["link", { "rel": "stylesheet", "href": "//fonts.googleapis.com/css?family=Lato:300,900" } ],
 		["div", { "class": "gittip-widget" },
 			["div", { "class": "gittip-inner" },
 				"I receive ", ["br"],

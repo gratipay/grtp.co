@@ -47,12 +47,11 @@
 			"-moz-box-shadow": "0 .33em 1em rgba(0,0,0,.67) inset, 1px 1px 0 rgba(255,255,255,.25) inset, -1px -1px 0 rgba(255,255,255,.25) inset",
 			"-webkit-box-shadow": "0 .33em 1em rgba(0,0,0,.67) inset, 1px 1px 0 rgba(255,255,255,.25) inset, -1px -1px 0 rgba(255,255,255,.25) inset",
 			"box-shadow": "0 .33em 1em rgba(0,0,0,.67) inset, 1px 1px 0 rgba(255,255,255,.25) inset, -1px -1px 0 rgba(255,255,255,.25) inset"
-		}],
-
-		"@import url(//fonts.googleapis.com/css?family=Lato:300,900)"
+		}]
 	],
 
 	"widget": [
+		["link", { "rel": "stylesheet", "href": "//fonts.googleapis.com/css?family=Lato:300,900" } ],
 		["a", { "class": "gittip-profile-link gittip-button gittip-my-tip-button" },
 			"Gittip"
 		]
