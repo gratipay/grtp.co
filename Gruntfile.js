@@ -31,6 +31,11 @@ module.exports = function(grunt) {
 			test: {
 				files: '<%= jshint.test %>',
 				tasks: 'jshint:test'
+			},
+
+			minify: {
+				files: '<%= jshint.dist %>',
+				tasks: 'minify'
 			}
 		},
 
