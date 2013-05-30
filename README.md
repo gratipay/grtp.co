@@ -47,7 +47,7 @@ widget's HTML, and the following classes:
 
 ```html
 <div data-gittip-username="rummik" data-gittip-widget="custom">
-	I receive <div class="gittip-profile-link"><div class="gittip-receiving">$0.00</div> / wk</a> on <a class="gittip-link">Gittip</a>.
+	I receive <a class="gittip-profile-link"><div class="gittip-receiving">$0.00</div> / wk</a> on <a class="gittip-link">Gittip</a>.
 </div>
 <script src="//gttp.co/v1.js"></script>
 ```
