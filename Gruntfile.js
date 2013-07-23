@@ -25,17 +25,12 @@ module.exports = function(grunt) {
 
 			dist: {
 				files: '<%= jshint.dist %>',
-				tasks: 'jshint:dist'
+				tasks: ['jshint:dist', 'uglify:dist']
 			},
 
 			test: {
 				files: '<%= jshint.test %>',
 				tasks: 'jshint:test'
-			},
-
-			minify: {
-				files: '<%= jshint.dist %>',
-				tasks: 'minify'
 			}
 		},
 
