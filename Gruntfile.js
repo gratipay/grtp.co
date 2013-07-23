@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 				eqnull: false,
 				regexdash: true,
 				smarttabs: true,
-				strict: false,
+				strict: true,
 				node: true,
 				browser: true,
 
