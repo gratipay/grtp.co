@@ -25,17 +25,12 @@ module.exports = function(grunt) {
 
 			dist: {
 				files: '<%= jshint.dist %>',
-				tasks: 'jshint:dist'
+				tasks: ['jshint:dist', 'uglify:dist']
 			},
 
 			test: {
 				files: '<%= jshint.test %>',
 				tasks: 'jshint:test'
-			},
-
-			minify: {
-				files: '<%= jshint.dist %>',
-				tasks: 'minify'
 			}
 		},
 
@@ -74,16 +69,18 @@ module.exports = function(grunt) {
 				quotmark: true,
 				sub: true,
 				undef: true,
+				unused: true,
 				boss: true,
 				eqnull: false,
 				regexdash: true,
 				smarttabs: true,
-				strict: false,
+				strict: true,
 				node: true,
 				browser: true,
 
 				globals: {
 					Gittip: true,
+					_gttp: true,
 
 					// JSHint doesn't like XDomainRequest otherwise
 					XDomainRequest: true
