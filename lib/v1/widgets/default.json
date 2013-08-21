@@ -7,6 +7,7 @@
       "display": "inline-block",
       "border": "2px solid #614C3E",
       "border-radius": "6pt",
+      "background": "white url(//gttp.co/v1/heart.gif) 64pt 31pt no-repeat",
       "text-align": "left"
     }],
 
@@ -36,7 +37,6 @@
 
   "widget": [
     ["link", { "rel": "stylesheet", "href": "//fonts.googleapis.com/css?family=Lato:300,900" } ],
-    ["link", { "rel": "stylesheet", "href": "//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" } ],
     ["div", { "class": "gittip-widget" },
       ["div", { "class": "gittip-inner" },
         "I receive ", ["br"],
@@ -44,8 +44,7 @@
           ["b", { "class": "gittip-receiving" }, "$0.00"], " / wk"
         ],
         ["br"],
-        " on ", ["a", { "class": "gittip-link" }, "Gittip"], ".",
-        ["i", { "class": "icon-gittip icon-2x" }]
+        " on ", ["a", { "class": "gittip-link" }, "Gittip"], "."
       ]
     ]
   ]
