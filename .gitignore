@@ -17,3 +17,5 @@ node_modules
 npm-debug.log
 
 config.json
+
+_vimrc_local.vim
