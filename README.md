@@ -36,20 +36,25 @@ You can create your own widgets by adding `data-gittip-widget="custom"` to your
 widget's HTML, and the following classes:
 
 - Text
-	- `gittip-receiving` - dollar-sign prefixed value of `receiving`
-	- `gittip-username` - the user's username
-	- `gittip-goal` - dollar-sign prefixed value of `goal`
-	- `gittip-giving` - dollar-sign prefixed value of `giving`
+  - `gittip-receiving` - dollar-sign prefixed value of `receiving`
+  - `gittip-username` - the user's username
+  - `gittip-goal` - dollar-sign prefixed value of `goal`
+  - `gittip-giving` - dollar-sign prefixed value of `giving`
 - Links
-	- `gittip-profile-link` - sets the `href` attribute to the user's profile link
-	- `gittip-link` - sets the `href` attribute to https://www.gittip.com/
+  - `gittip-profile-link` - sets the `href` attribute to the user's profile
+    link
+  - `gittip-link` - sets the `href` attribute to https://www.gittip.com/
 - Misc styling
-	- `gittip-goal-progress-bar` - sets the element's width to a percentage value of the user's goal progress
+  - `gittip-goal-progress-bar` - sets the element's width to a percentage value
+    of the user's goal progress
 
 
 ```html
 <div data-gittip-username="rummik" data-gittip-widget="custom">
-	I receive <a class="gittip-profile-link"><div class="gittip-receiving">$0.00</div> / wk</a> on <a class="gittip-link">Gittip</a>.
+  I receive <a class="gittip-profile-link">
+    <span class="gittip-receiving">$0.00</span> / wk
+  </a>
+  on <a class="gittip-link">Gittip</a>.
 </div>
 <script src="//gttp.co/v1.js"></script>
 ```
