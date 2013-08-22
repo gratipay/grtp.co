@@ -3,11 +3,13 @@
 Gittip widgets + widget API
 
 ## Getting Started
-
+Quickstart:
 ```
 $ git clone git@github.com:gittip/gttp.co.git
 $ cd gttp.co
-$ npm install
+$ npm install --dev
+$ npm install -g grunt-cli
+$ grunt
 $ node start.js
 ```
 
