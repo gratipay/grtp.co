@@ -19,16 +19,25 @@ Then visit http://localhost:1234/
 ## Documentation
 _(Coming soon)_
 
+Configuration options:
+- gttpAPI - Where to look for the gttp.co API
+  - defaults to `//gttp.co/v1/`
+- gittipURI - Where to look for Gittip
+  - defaults to `https://www.gittip.com/`
+
 ## Examples
 In the following examples, just switch out `rummik` with your Gittip username.
 
 ### Standard Widgets
 ```html
-<script src="//gttp.co/v1.js" data-gittip-username="rummik"></script>
+<script data-gittip-username="rummik"
+  src="//gttp.co/v1.js"></script>
 ```
 
 ```html
-<script src="//gttp.co/v1.js" data-gittip-username="rummik" data-gittip-widget="button"></script>
+<script data-gittip-username="rummik"
+  data-gittip-widget="button"
+  src="//gttp.co/v1.js"></script>
 ```
 
 ### Custom Widgets
