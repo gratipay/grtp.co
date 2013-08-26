@@ -1,4 +1,4 @@
-# gttp.co [![Testing](https://secure.travis-ci.org/gittip/gttp.co.png)](http://travis-ci.org/gittip/gttp.co)
+# gttp.co [![Testing](https://secure.travis-ci.org/gittip/gttp.co.png)](http://travis-ci.org/gittip/gttp.co) [![Dependency Status](https://gemnasium.com/gittip/gttp.co.png)](https://gemnasium.com/gittip/gttp.co)
 
 Gittip widgets + widget API
 
