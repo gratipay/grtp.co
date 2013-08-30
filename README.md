@@ -31,13 +31,13 @@ In the following examples, just switch out `rummik` with your Gittip username.
 ### Standard Widgets
 ```html
 <script data-gittip-username="rummik"
-  src="//gttp.co/v1.js"></script>
+  src="//gttp.co/v1.js" async></script>
 ```
 
 ```html
 <script data-gittip-username="rummik"
   data-gittip-widget="button"
-  src="//gttp.co/v1.js"></script>
+  src="//gttp.co/v1.js" async></script>
 ```
 
 ### Custom Widgets
