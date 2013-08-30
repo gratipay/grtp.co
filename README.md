@@ -49,6 +49,7 @@ widget's HTML, and the following classes:
   - `gittip-username` - the user's username
   - `gittip-goal` - dollar-sign prefixed value of `goal`
   - `gittip-giving` - dollar-sign prefixed value of `giving`
+  - `gittip-identity` - `I` if `number` is `singular`, `We` if `number` is `plural`
 - Links
   - `gittip-profile-link` - sets the `href` attribute to the user's profile
     link
