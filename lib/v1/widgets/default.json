@@ -39,7 +39,7 @@
     ["link", { "rel": "stylesheet", "href": "//fonts.googleapis.com/css?family=Lato:300,900" } ],
     ["div", { "class": "gittip-widget" },
       ["div", { "class": "gittip-inner" },
-        "I receive ", ["br"],
+        ["span", { "class": "gittip-identity" }], " receive ", ["br"],
         ["a", { "class": "gittip-profile-link" },
           ["b", { "class": "gittip-receiving" }, "$0.00"], " / wk"
         ],

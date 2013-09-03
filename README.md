@@ -31,13 +31,13 @@ In the following examples, just switch out `rummik` with your Gittip username.
 ### Standard Widgets
 ```html
 <script data-gittip-username="rummik"
-  src="//gttp.co/v1.js"></script>
+  src="//gttp.co/v1.js" async></script>
 ```
 
 ```html
 <script data-gittip-username="rummik"
   data-gittip-widget="button"
-  src="//gttp.co/v1.js"></script>
+  src="//gttp.co/v1.js" async></script>
 ```
 
 ### Custom Widgets
@@ -49,6 +49,7 @@ widget's HTML, and the following classes:
   - `gittip-username` - the user's username
   - `gittip-goal` - dollar-sign prefixed value of `goal`
   - `gittip-giving` - dollar-sign prefixed value of `giving`
+  - `gittip-identity` - `I` if `number` is `singular`, `We` if `number` is `plural`
 - Links
   - `gittip-profile-link` - sets the `href` attribute to the user's profile
     link
