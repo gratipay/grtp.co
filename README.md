@@ -75,9 +75,8 @@ style. Add unit tests for any new or changed functionality. Lint and test your
 code using [grunt](https://github.com/gruntjs/grunt).
 
 ### Vim users
-We recommend using [this Vim script](https://code.google.com/p/lh-vim/source/browse/misc/trunk/plugin/local_vimrc.vim)
-which loads `.vimrc_local.vim` files, as well as adding the following lines to
-your `~/.vimrc`:
+We recommend using [this Vim script][local_vimrc.vim] which loads `_vimrc_local.vim`
+files, as well as adding the following lines to your `~/.vimrc`:
 
 ```vim
 " Use .vimrc_local.vim instead of _vimrc_local.vim
@@ -87,6 +86,8 @@ let g:local_vimrc = '.vimrc_local.vim'
 _For users who don't wish to set `g:local_vimrc`, you can
 `ln -s .vimrc_local.vim _vimrc_local.vim`.  Note: `_vimrc_local.vim` is ignored
 by our `.gitignore`_
+
+[local_vimrc.vim]: https://code.google.com/p/lh-vim/source/browse/misc/trunk/plugin/local_vimrc.vim
 
 ## Release History
 _(Nothing yet)_
