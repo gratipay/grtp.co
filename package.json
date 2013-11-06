@@ -30,8 +30,8 @@
   },
   "dependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-jshint": "~0.7.1",
     "grunt-minjson": "~0.1.1"
   },
   "keywords": [],
