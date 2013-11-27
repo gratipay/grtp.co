@@ -58,21 +58,7 @@ module.exports = function(grunt) {
             test: 'test/**/*.{js,json}',
 
             options: {
-                immed: true,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                quotmark: true,
-                sub: true,
-                undef: true,
-                unused: true,
-                boss: true,
-                eqnull: false,
-                regexdash: true,
-                smarttabs: true,
-                strict: true,
-                node: true,
-                browser: true,
+                jshintrc: '.jshintrc',
 
                 globals: {
                     Gittip: true,
