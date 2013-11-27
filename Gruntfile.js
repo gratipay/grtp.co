@@ -55,6 +55,7 @@ module.exports = function(grunt) {
         jshint: {
             gruntfile: 'Gruntfile.js',
             dist: 'lib/**/*.{js,json}',
+            test: 'test/**/*.{js,json}',
 
             options: {
                 immed: true,
