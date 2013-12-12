@@ -1,0 +1,20 @@
+{
+  "name": "gttp.co",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gittip/gttp.co",
+  "authors": [
+    "rummik <r@9k1.us>"
+  ],
+  "license": "CC0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.0.3"
+  }
+}
