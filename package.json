@@ -1,7 +1,7 @@
 {
   "name": "gttp.co",
   "description": "Gittip widgets.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/zetaweb/gttp.co",
   "private": true,
   "author": {
@@ -31,12 +31,12 @@
   "dependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.5",
-    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-contrib-jshint": "~0.8.0",
     "grunt-minjson": "~0.1.1"
   },
   "keywords": [],
   "devDependencies": {
-    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-connect": "~0.6.0",
     "grunt-contrib-watch": "~0.5.3",
     "aspen": "~1.1.0"
   }
