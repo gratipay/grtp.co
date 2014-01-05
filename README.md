@@ -7,7 +7,7 @@ Quickstart:
 ```
 $ git clone git@github.com:gittip/gttp.co.git
 $ cd gttp.co
-$ npm install --dev
+$ npm install
 $ npm install -g grunt-cli
 $ grunt
 $ node start.js
