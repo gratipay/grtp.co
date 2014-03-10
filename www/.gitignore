@@ -1,3 +1,4 @@
 *.js
 *.json
 !js/*.js
+v1/widgets/*.html

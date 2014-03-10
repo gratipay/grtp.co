@@ -20,8 +20,8 @@ module.exports = function(grunt) {
             },
 
             dist: {
-                files: '<%= jshint.dist %>',
-                tasks: ['jshint:dist', 'uglify:dist', 'minjson:dist']
+                files: 'lib/**/*',
+                tasks: ['jshint:dist', 'uglify:dist', 'minjson:dist', 'htmlmin:dist']
             },
 
             test: {
@@ -48,6 +48,19 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'lib/',
                 src: '**/*.json',
+                dest: 'www/'
+            }
+        },
+
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true
+                },
+
+                expand: true,
+                cwd: 'lib/',
+                src: '**/*.html',
                 dest: 'www/'
             }
         },
@@ -103,10 +116,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('default', ['test', 'minify']);
-    grunt.registerTask('minify', ['uglify', 'minjson']);
+    grunt.registerTask('minify', ['uglify', 'minjson', 'htmlmin']);
     grunt.registerTask('test', ['jshint', 'connect', 'karma:singlerun']);
     grunt.registerTask('watch-tests', ['connect', 'karma:tests']);
 };
