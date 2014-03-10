@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 
             dist: {
                 files: 'lib/**/*',
-                tasks: ['jshint:dist', 'uglify:dist', 'minjson:dist', 'htmlmin:dist']
+                tasks: ['jshint:dist', 'uglify:dist', 'htmlmin:dist']
             },
 
             test: {
@@ -40,15 +40,6 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'lib/',
                 src: '**/*.js',
-                dest: 'www/'
-            }
-        },
-
-        minjson: {
-            dist: {
-                expand: true,
-                cwd: 'lib/',
-                src: '**/*.json',
                 dest: 'www/'
             }
         },
@@ -93,7 +84,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-minjson');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
