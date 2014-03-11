@@ -1,25 +1,21 @@
-var should = require('should');
+module.exports = {
 
-var $body, $iframe = $('<iframe/>').appendTo('body');
-describe('Custom Widget', function() {
-    beforeEach(function(done) {
-        $iframe.attr('src', '/test/custom-widget.html')
-            .one('load', function() {
-                $body = $(this.contentDocument.body);
-                done();
-            });
-    });
+    'readystatus should be ready': function(test) {
+        test.open('http://localhost:9537/test/custom-widget.html')
+            .wait()
+            .assert.attr('[data-gittip-username]', 'data-gittip-readystatus').is('ready', 'readystatus should be ready')
+            .done();
+    },
 
-    it('should be ready', function() {
-        $body.find('[data-gittip-username]').data('gittip-readystatus').should.equal('ready');
-    });
+    'it should fill the standard values': function(test) {
+        test.open('http://localhost:9537/test/custom-widget.html')
+            .wait()
+            .assert.text('.gittip-username').is.not('', 'username should not be empty')
+            .assert.text('.gittip-identity').is.not('', 'identity should not be empty')
+            .assert.text('.gittip-giving').is.not('', 'giving should not be empty')
+            .assert.text('.gittip-receiving').is.not('', 'receiving should not be empty')
+            .assert.text('.gittip-goal').is.not('', 'goal should not be empty')
+            .done();
+    },
 
-    it('should have the usual values', function() {
-        $body.find('.gittip-username').text().should.not.equal('');
-        $body.find('.gittip-profile-link').attr('href').should.not.equal('');
-        $body.find('.gittip-identity').text().should.not.equal('');
-        $body.find('.gittip-giving').text().should.not.equal('');
-        $body.find('.gittip-receiving').text().should.not.equal('');
-        $body.find('.gittip-goal').text().should.not.equal('');
-    });
-});
+};
