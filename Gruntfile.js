@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
+                    useAvailablePort: true,
                     port: 9537,
                     base: '.'
                 }

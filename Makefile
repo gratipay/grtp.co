@@ -3,7 +3,8 @@
 all: node_modules
 	./node_modules/.bin/grunt
 
-# TODO: Figure out how to add a `make run`.
+run: node_modules
+	./node_modules/.bin/grunt connect:server:keepalive
 
 minify: node_modules
 	./node_modules/.bin/grunt minify
