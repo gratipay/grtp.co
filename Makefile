@@ -1,11 +1,11 @@
 # `make` or `make all` will just pass through to grunt.
 # The default behavior for grunt is equivalent to `grunt test && grunt minify`.
-all:
+all: node_modules
 	./node_modules/.bin/grunt
 
 # TODO: Figure out how to add a `make run`.
 
-minify:
+minify: node_modules
 	./node_modules/.bin/grunt minify
 
 test: jstest
