@@ -40,6 +40,12 @@ In the following examples, just switch out `rummik` with your Gittip username.
   src="//gttp.co/v1.js" async></script>
 ```
 
+```html
+<script data-gittip-username="rummik"
+  data-gittip-widget="giving"
+  src="//gttp.co/v1.js" async></script>
+```
+
 ### Custom Widgets
 You can create your own widgets by adding `data-gittip-widget="custom"` to your
 widget's HTML, and the following classes:
