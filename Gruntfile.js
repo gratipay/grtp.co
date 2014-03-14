@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
             test: {
                 files: ['<%= jshint.test %>', 'test/**/*.html'],
-                tasks: ['jshint:test', 'karma:tests:run']
+                tasks: ['jshint:test', 'connect', 'dalek']
             }
         },
 
@@ -83,30 +83,11 @@ module.exports = function(grunt) {
             }
         },
 
-        karma: {
-            tests: {
-                hostname: '0.0.0.0'
-            },
-
-            singlerun: {
-                singleRun: true
-            },
+        dalek: {
+            test: 'test/**/*.js',
 
             options: {
-                browsers: ['PhantomJS'],
-                reporters: 'dots',
-                frameworks: ['mocha', 'browserify'],
-                urlRoot: '/karma/',
-                proxies: { '/': 'http://localhost:9537/' },
-                files: [
-                    'bower_components/jquery/jquery.js',
-                    'test/**/test_*.js',
-                ],
-
-                browserify: { watch: true },
-                preprocessors: {
-                    'test/**/*.js': ['browserify']
-                }
+                reporter: ['console']
             }
         }
     });
@@ -117,10 +98,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-dalek');
 
     grunt.registerTask('default', ['test', 'minify']);
     grunt.registerTask('minify', ['uglify', 'minjson', 'htmlmin']);
-    grunt.registerTask('test', ['jshint', 'connect', 'karma:singlerun']);
-    grunt.registerTask('watch-tests', ['connect', 'karma:tests']);
+    grunt.registerTask('test', ['jshint', 'connect', 'dalek']);
 };
