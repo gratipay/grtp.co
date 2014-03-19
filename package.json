@@ -41,7 +41,6 @@
   "keywords": [],
   "devDependencies": {
     "grunt-contrib-connect": "~0.7.1",
-    "grunt-contrib-watch": "~0.6.0",
-    "aspen": "~1.1.0"
+    "grunt-contrib-watch": "~0.6.0"
   }
 }
