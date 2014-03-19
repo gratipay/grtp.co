@@ -1,6 +1,12 @@
-# gttp.co [![Testing](https://secure.travis-ci.org/gittip/gttp.co.png)](http://travis-ci.org/gittip/gttp.co) [![Dependency Status](https://gemnasium.com/gittip/gttp.co.png)](https://gemnasium.com/gittip/gttp.co)
+gttp.co [![Builds][]][Travis] [![Deps][]][Gemnasium]
+=======
 
 Gittip widgets + widget API
+
+[Builds]: http://img.shields.io/Travis-ci/gittip/gttp.co.png "Build Status"
+[Travis]: https://travis-ci.org/gittip/gttp.co
+[Deps]: https://Gemnasium.com/gittip/gttp.co.png "Dependency Status"
+[Gemnasium]: https://gemnasium.com/gittip/gttp.co
 
 ## Getting Started
 Quickstart:
@@ -59,7 +65,8 @@ widget's HTML, and the following classes:
   - `gittip-username` - the user's username
   - `gittip-goal` - dollar-sign prefixed value of `goal`
   - `gittip-giving` - dollar-sign prefixed value of `giving`
-  - `gittip-identity` - `I` if `number` is `singular`, `We` if `number` is `plural`
+  - `gittip-identity` - `I` if `number` is `singular`, `We` if `number` is
+    `plural`
 - Links
   - `gittip-profile-link` - sets the `href` attribute to the user's profile
     link
