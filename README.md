@@ -17,13 +17,13 @@ Then visit http://localhost:1234/
 
 
 ## Documentation
-_(Coming soon)_
+Jsdoc style comments are used, but documentation generation is not setup yet. The code is documented, please dive in.
 
 Configuration options:
-- gttpAPI - Where to look for the gttp.co API
-  - defaults to `//gttp.co/v1/`
-- gittipURI - Where to look for Gittip
-  - defaults to `https://www.gittip.com/`
+- `window.gttpAPI` - Where to look for the gttp.co API
+  - defaults to `"//gttp.co/v1/"`
+- `window.gittipURI` - Where to look for Gittip
+  - defaults to `"https://www.gittip.com/"`
 
 ## Examples
 In the following examples, just switch out `rummik` with your Gittip username.
