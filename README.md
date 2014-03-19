@@ -13,13 +13,10 @@ Quickstart:
 ```
 $ git clone git@github.com:gittip/gttp.co.git
 $ cd gttp.co
-$ npm install
-$ npm install -g grunt-cli
-$ grunt
-$ node start.js
+$ make run
 ```
 
-Then visit http://localhost:1234/
+Then visit http://localhost:9537/test/
 
 
 ## Documentation
