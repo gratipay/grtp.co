@@ -26,8 +26,7 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt test --verbose",
-    "postinstall": "[ x$NODE_ENV = xproduction ] && bower install -p || bower install"
+    "test": "grunt test --verbose"
   },
   "dependencies": {
     "grunt": "~0.4.4",
@@ -42,8 +41,6 @@
   "keywords": [],
   "devDependencies": {
     "grunt-contrib-connect": "~0.7.1",
-    "grunt-contrib-watch": "~0.6.0",
-    "aspen": "~1.1.0",
-    "bower": "~1.3.1"
+    "grunt-contrib-watch": "~0.6.0"
   }
 }
