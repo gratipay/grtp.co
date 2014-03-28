@@ -83,6 +83,7 @@ widget's HTML, and the following classes:
 <script src="//gttp.co/v1.js"></script>
 ```
 
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
@@ -91,8 +92,6 @@ code using [grunt](https://github.com/gruntjs/grunt).
 To help keep a consistent style, we also recommend using
 [EditorConfig](http://editorconfig.org).
 
-## Release History
-_(Nothing yet)_
 
 ## License
 Released into the public domain (per CC0).
