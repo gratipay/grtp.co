@@ -92,6 +92,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-dalek');
 
     grunt.registerTask('default', ['test', 'minify']);
-    grunt.registerTask('minify', ['uglify', 'minjson', 'htmlmin']);
+    grunt.registerTask('minify', ['uglify', 'htmlmin']);
     grunt.registerTask('test', ['jshint', 'connect', 'dalek']);
 };
