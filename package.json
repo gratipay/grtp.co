@@ -2,7 +2,7 @@
   "name": "grtp.co",
   "description": "Gratipay widgets.",
   "version": "0.1.1",
-  "homepage": "https://github.com/zetaweb/grtp.co",
+  "homepage": "https://github.com/gratipay/grtp.co",
   "private": true,
   "author": {
     "name": "Chad Whitacre",
@@ -11,15 +11,15 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/zetaweb/grtp.co.git"
+    "url": "git://github.com/gratipay/grtp.co.git"
   },
   "bugs": {
-    "url": "https://github.com/zetaweb/grtp.co/issues"
+    "url": "https://github.com/gratipay/grtp.co/issues"
   },
   "licenses": [
     {
       "type": "CC0",
-      "url": "https://github.com/zetaweb/grtp.co/tree/master/COPYING"
+      "url": "https://github.com/gratipay/grtp.co/tree/master/COPYING"
     }
   ],
   "engines": {
