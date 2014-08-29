@@ -66,8 +66,8 @@ module.exports = function(grunt) {
                 jshintrc: '.jshintrc',
 
                 globals: {
-                    Gittip: true,
-                    _gttp: true,
+                    Gratipay: true,
+                    _grtp: true,
 
                     // JSHint doesn't like XDomainRequest otherwise
                     XDomainRequest: true
