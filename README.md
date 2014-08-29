@@ -91,7 +91,7 @@ root is `/home/grtp.co/production`.
 
 To modify the nginx configuration, you need someone who already has access to
 add your key to `/root/.ssh/authorized_keys`. You'll find the config in
-`/etc/nginx/sites-enables/grtp.co`. After you make changes, you can reload
+`/etc/nginx/sites-enabled/grtp.co`. After you make changes, you can reload
 configuration in nginx like this:
 
 ```
@@ -99,7 +99,8 @@ configuration in nginx like this:
 ```
 
 To deploy, you need someone who already has access to add your key to
-`/home/grtp/.ssh/authorized_keys`. Then add the remote to your own local repo:
+`/home/grtp.co/.ssh/authorized_keys`. Then add the remote to your own local
+repo:
 
 ```
 $ git remote add prod grtp@grtp.co:production
