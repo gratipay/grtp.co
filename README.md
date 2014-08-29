@@ -27,7 +27,7 @@ Configuration options:
 - `window.grtpAPI` - Where to look for the grtp.co API
   - defaults to `//grtp.co/v1/`
 - `window.gratipayURI` - Where to look for Gratipay
-  - defaults to `https://www.gratipay.com/`
+  - defaults to `https://gratipay.com/`
 
 ## Examples
 In the following examples, just switch out `rummik` with your Gratipay username.
@@ -67,7 +67,7 @@ widget's HTML, and the following classes:
 - Links
   - `gratipay-profile-link` - sets the `href` attribute to the user's profile
     link
-  - `gratipay-link` - sets the `href` attribute to https://www.gratipay.com/
+  - `gratipay-link` - sets the `href` attribute to https://gratipay.com/
 - Misc styling
   - `gratipay-goal-progress-bar` - sets the element's width to a percentage value
     of the user's goal progress
