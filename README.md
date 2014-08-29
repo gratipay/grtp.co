@@ -33,20 +33,20 @@ Configuration options:
 In the following examples, just switch out `rummik` with your Gratipay username.
 
 ### Standard Widgets
-![](http://9k1.us/R4YV/receiving.png)
+![](https://cloud.githubusercontent.com/assets/134455/4095888/3e6d7758-2fba-11e4-935f-14e30c32ac1e.png)
 ```html
 <script data-gratipay-username="rummik"
   src="//grtp.co/v1.js" async></script>
 ```
 
-![](http://9k1.us/SUNk/button.png)
+![](https://cloud.githubusercontent.com/assets/134455/4095889/3fb3b5f0-2fba-11e4-8adb-250a0dc4e9cf.png)
 ```html
 <script data-gratipay-username="rummik"
   data-gratipay-widget="button"
   src="//grtp.co/v1.js" async></script>
 ```
 
-![](http://9k1.us/ySv6/giving.png)
+![](https://cloud.githubusercontent.com/assets/134455/4095908/997bc05a-2fba-11e4-99cb-56ad9cbad392.png)
 ```html
 <script data-gratipay-username="rummik"
   data-gratipay-widget="giving"
