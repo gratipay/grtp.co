@@ -4,7 +4,7 @@
         "twitter": {
             "id": 80324,
             "user_id": "1313765257",
-            "user_name": "Gittip"
+            "user_name": "gratipay"
         }
     },
     "giving": "37.00",
@@ -12,5 +12,5 @@
     "id": 20176,
     "number": "plural",
     "receiving": "370.75",
-    "username": "Gittip"
+    "username": "gratipay"
 }
