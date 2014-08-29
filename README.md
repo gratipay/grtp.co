@@ -102,7 +102,7 @@ To deploy, you need someone who already has access to add your key to
 `/home/grtp/.ssh/authorized_keys`. Then add the remote to your own local repo:
 
 ```
-$ git remote add prod grtp@grtp.co:production/.git
+$ git remote add prod grtp@grtp.co:production
 ```
 
 Then you can `git push prod`. There's a post-receive hook that updates the
