@@ -84,6 +84,31 @@ widget's HTML, and the following classes:
 ```
 
 
+## Deployment
+
+Grtp.co is hosted on a Digital Ocean droplet. It runs nginx and the publishing
+root is `/home/grtp.co/production`. 
+
+To modify the nginx configuration, you need someone who already has access to
+add your key to `/root/.ssh/authorized_keys`. You'll find the config in
+`/etc/nginx/sites-enables/grtp.co`. After you make changes, you can reload
+configuration in nginx like this:
+
+```
+# service nginx reload
+```
+
+To deploy, you need someone who already has access to add your key to
+`/home/grtp/.ssh/authorized_keys`. Then add the remote to your own local repo:
+
+```
+$ git remote add prod grtp@grtp.co:production/.git
+```
+
+Then you can `git push prod`. There's a post-receive hook that updates the
+filesystem on the droplet and runs the grunt minify task.
+
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
