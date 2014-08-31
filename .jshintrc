@@ -1,5 +1,5 @@
-{ "laxbreak": true
-, "laxcomma": true
-, "boss": true
-, "shadow": true
- }
+{
+    "camelcase": true,
+    "boss": true,
+    "shadow": true
+}
