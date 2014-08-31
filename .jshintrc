@@ -1,4 +1,5 @@
 {
+    "indent": 4,
     "curly": true,
     "camelcase": true,
     "shadow": true
