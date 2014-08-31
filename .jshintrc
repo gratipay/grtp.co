@@ -1,5 +1,6 @@
-{ "laxbreak": true
-, "laxcomma": true
-, "boss": true
-, "shadow": true
- }
+{
+    "indent": 4,
+    "curly": true,
+    "camelcase": true,
+    "shadow": true
+}
