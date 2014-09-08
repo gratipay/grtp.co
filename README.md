@@ -84,6 +84,13 @@ widget's HTML, and the following classes:
 ```
 
 
+## Other Widgets
+[Shields.io](http://shields.io): [![](http://img.shields.io/gratipay/Gratipay.svg)](http://shields.io)
+```html
+<img src="http://img.shields.io/gratipay/Gratipay.svg">
+```
+
+
 ## Deployment
 
 Grtp.co is hosted on a Digital Ocean droplet. It runs nginx and the publishing
