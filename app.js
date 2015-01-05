@@ -34,6 +34,8 @@ app.get('/v2/:username/:widget.svg', function(req, res) {
 });
 
 app.get('/v2/:username/:widget.png', function(req, res) {
+    res.set('Content-Type', 'image/png');
+
     request
         .get(
             'http://localhost:' + port + '/v2/' +
