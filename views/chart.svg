@@ -27,7 +27,7 @@
         (function animate() {
             current += step;
 
-            receiving.innerHTML = '$' + current.toFixed(2) + '/wk';
+            receiving.textContent = '$' + current.toFixed(2) + '/wk';
 
             if (++count < steps) {
                 setTimeout(animate, interval);
@@ -42,18 +42,21 @@
                 from="0 142"
                 to="0 0"
                 dur="0.8" />
-        {% set width = 234 / charts.length %}
-        {% for chart in charts|reverse %}
-            {% set height = chart.receipts / max_received * 107 %}
-            <rect x="{{ 6 + loop.index * width }}" y="{{ 142 - height }}" width="{{ width }}" height="{{ height }}">
+
+            <g>
+                {% set width = 234 / charts.length %}
+                {% for chart in charts|reverse %}
+                {% set height = chart.receipts / max_received * 107 %}
+                <rect x="{{ 6 + loop.index * width }}" y="{{ 142 - height }}" width="{{ width }}" height="{{ height }}"/>
+                {% endfor %}
+
                 <animateTransform
                     attributeName="transform"
                     type="scale"
                     from="1 0"
                     to="1 1"
                     dur="0.8" />
-            </rect>
-        {% endfor %}
+            </g>
         </g>
     </a>
 </svg>
