@@ -1,45 +1,19 @@
 {
-  "name": "grtp.co",
-  "description": "Gratipay widgets.",
-  "version": "0.1.2",
-  "homepage": "https://github.com/gratipay/grtp.co",
   "private": true,
-  "author": {
-    "name": "Chad Whitacre",
-    "email": "chad@zetaweb.com"
-  },
-  "contributors": [],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gratipay/grtp.co.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gratipay/grtp.co/issues"
-  },
-  "licenses": [
-    {
-      "type": "CC0",
-      "url": "https://github.com/gratipay/grtp.co/tree/master/COPYING"
-    }
-  ],
-  "engines": {
-    "node": ">= 0.10.0"
-  },
+  "version": "2.0.0",
+  "license": "CC0-1.0",
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "gulp test --verbose"
   },
   "dependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-jshint": "~0.9.2",
-    "grunt-contrib-htmlmin": "~0.2.0",
-    "grunt-dalek": "~0.2.0",
-    "dalekjs": "0.0.8",
-    "grunt-cli": "~0.1.13"
+    "consolidate": "^0.10.0",
+    "express": "^4.10.6",
+    "imagemagick-stream": "^1.1.0",
+    "request": "^2.51.0",
+    "swig": "^1.4.2"
   },
-  "keywords": [],
-  "devDependencies": {
-    "grunt-contrib-connect": "~0.7.1",
-    "grunt-contrib-watch": "~0.6.0"
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 0.10.0"
   }
 }

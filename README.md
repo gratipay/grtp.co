@@ -94,7 +94,7 @@ widget's HTML, and the following classes:
 ## Deployment
 
 Grtp.co is hosted on a Digital Ocean droplet. It runs nginx and the publishing
-root is `/home/grtp.co/production`. 
+root is `/home/grtp.co/production`.
 
 To modify the nginx configuration, you need someone who already has access to
 add your key to `/root/.ssh/authorized_keys`. You'll find the config in
