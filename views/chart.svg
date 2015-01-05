@@ -16,10 +16,23 @@
         </g>
 
         <g fill="#fff" shape-rendering="crispEdges">
+            <animateTransform
+                attributeName="transform"
+                type="translate"
+                from="0 142"
+                to="0 0"
+                dur="0.8" />
         {% set width = 234 / charts.length %}
         {% for chart in charts|reverse %}
             {% set height = chart.receipts / max_received * 107 %}
-            <rect x="{{ 6 + loop.index * width }}" y="{{ 142 - height }}" width="{{ width }}" height="{{ height }}" />
+            <rect x="{{ 6 + loop.index * width }}" y="{{ 142 - height }}" width="{{ width }}" height="{{ height }}">
+                <animateTransform
+                    attributeName="transform"
+                    type="scale"
+                    from="1 0"
+                    to="1 1"
+                    dur="0.8" />
+            </rect>
         {% endfor %}
         </g>
     </a>
