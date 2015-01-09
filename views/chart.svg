@@ -1,3 +1,4 @@
+{% spaceless %}
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="250" height="150">
@@ -18,15 +19,14 @@
         <rect x="8" y="142" width="234" height="1" fill="#fff" />
 
         <g id="chartOuter" fill="#fff" shape-rendering="crispEdges">
-            <!-- A single 1px line -->
-
             <g id="chartInner">
                 {% set width = 234 / charts.length %}
-                {% for chart in charts %}
+                <path d="M242,142{% for chart in charts %}
                 {% set height = chart.receipts / max_received * 100 %}
-                <rect x="{{ 242 - loop.index * width }}" y="{{ 142 - height }}"
-                      width="{{ width }}" height="{{ height }}" />
-                {% endfor %}
+                {% set minusone = loop.index - 1 %}
+                L{{ Math.floor(242 - minusone * width) }},{{ Math.floor(142 - height) }}
+                L{{ Math.floor(242 - loop.index * width) }},{{ Math.floor(142 - height) }}
+                {% endfor %}L8,142z" />
             </g>
         </g>
     </a>
@@ -61,3 +61,4 @@
     }, 1000);
     ]]></script>
 </svg>
+{% endspaceless %}
