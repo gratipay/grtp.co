@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="250" height="150"
-     viewBox="0 0 250 150">
+     width="250" height="150">
 
     <a xlink:href="https://gratipay.com/{{username}}/" target="_blank">
         <rect x="0" y="0" width="250" height="150" rx="3" fill="#396" />
@@ -12,54 +11,53 @@
         </g>
 
         <g font-family="sans-serif" font-size="16" fill="#fff">
-            <text x="40" y="22.7" alignment-baseline="middle">{{username}}</text>
-            <text x="242" y="22.7" text-anchor="end" alignment-baseline="middle" id="receiving">${{receiving}}/wk</text>
+            <text x="40" y="27">{{username}}</text>
+            <text x="242" y="27" text-anchor="end" id="receiving">${{receiving}}/wk</text>
         </g>
 
-        <g fill="#fff" shape-rendering="crispEdges">
-            <animateTransform
-                attributeName="transform"
-                type="translate"
-                from="0 142"
-                to="0 0"
-                dur="0.8" />
+        <rect x="8" y="142" width="234" height="1" fill="#fff" />
 
-            <g>
+        <g id="chartOuter" fill="#fff" shape-rendering="crispEdges">
+            <!-- A single 1px line -->
+
+            <g id="chartInner">
                 {% set width = 234 / charts.length %}
                 {% for chart in charts %}
                 {% set height = chart.receipts / max_received * 100 %}
                 <rect x="{{ 242 - loop.index * width }}" y="{{ 142 - height }}"
                       width="{{ width }}" height="{{ height }}" />
                 {% endfor %}
-
-                <animateTransform
-                    attributeName="transform"
-                    type="scale"
-                    from="1 0"
-                    to="1 1"
-                    dur="0.8" />
             </g>
         </g>
     </a>
 
     <script><![CDATA[
-    var total = {{ receiving }};
-    var current = 0;
-    var count = 0;
+    var recValue = {{ receiving }};
+
     var interval = 1000 / 30;
     var steps = Math.floor(800 / interval);
-    var step = total / steps;
+    var step = 0;
+
     var receiving = document.getElementById('receiving');
+    var chartOuter = document.getElementById('chartOuter');
+    var chartInner = document.getElementById('chartInner');
 
-    (function animate() {
-        current += step;
+    receiving.textContent = '$0.00/wk';
+    chartInner.setAttribute('transform', 'scale(1 0)');
+    chartOuter.setAttribute('transform', 'translate(0 142)');
 
-        receiving.textContent = '$' + current.toFixed(2) + '/wk';
+    setTimeout(function() {
+        (function animate() {
+            var current = step / steps;
 
-        if (++count < steps) {
-            setTimeout(animate, interval);
-        }
-    })();
+            receiving.textContent = '$' + (recValue * current).toFixed(2) + '/wk';
+            chartInner.setAttribute('transform', 'scale(1 ' + current + ')');
+            chartOuter.setAttribute('transform', 'translate(0 ' + (142 - 142 * current) + ')');
+
+            if (step++ < steps) {
+                setTimeout(animate, interval);
+            }
+        })();
+    }, 1000);
     ]]></script>
 </svg>
-
