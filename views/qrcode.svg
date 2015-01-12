@@ -6,18 +6,29 @@
 {% block svg %}
 <defs>
     <clipPath id="heart">
-        <path transform="translate(-66 -45) scale(0.25)" d="M 763,1046 413,573 q -16,-22 -24.5,-59 -8.5,-37 6,-85 14.5,-48 61.5,-79 40,-26 83,-25.5 43,0.5 73.5,17.5 30.5,17 54.5,45 36,40 96,40 59,0 95,-40 24,-28 54.5,-45 30.5,-17 73.5,-17.5 43,-0.5 84,25.5 46,31 60.5,79 14.5,48 6,85 -8.5,37 -24.5,59 z" />
+        <path d="M39,100a1,1 0 0,1 60,-50q25,25 50,0a1,1 0 0,1 60,50l-85,115z" />
     </clipPath>
 
     <path id="qr" shape-rendering="crispEdges" stroke-width="1"
           transform="translate(16 16) scale({{ (width - 32) / matrix.length }}) translate(0 0.5)"
           d="{% for y, row in matrix %}
-              {% for x, col in row %}
-                  {% if col %}
-                  M{{x}},{{y}}h1z
-                  {% endif %}
-              {% endfor %}
-          {% endfor %}" />
+                 {% set l = 0 %}
+                 {% set s = 0 %}
+                 {% for x, col in row %}
+                     {% if col %}
+                         {% set l += 1 %}
+
+                         {% if l == 1 %}
+                             {% set s = x %}
+                         {% endif %}
+                     {% endif %}
+
+                     {% if l and ( not col or x == matrix.length - 1 ) %}
+                         M{{s}},{{y}}h{{l}}z
+                         {% set l = 0 %}
+                     {% endif %}
+                 {% endfor %}
+             {% endfor %}" />
 </defs>
 
 <a xlink:href="https://gratipay.com/{{username}}/" target="_blank">
