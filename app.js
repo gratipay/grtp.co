@@ -1,6 +1,7 @@
 var express = require('express');
 var engines = require('consolidate');
 var request = require('request');
+var QrCode = require('javascript-qrcode').QrCode;
 var async = require('async');
 var im = require('imagemagick-stream');
 var app = express();
@@ -12,6 +13,16 @@ app.engine('svg', engines.swig);
 app.get('/v2/:username/button.svg', function(req, res) {
     res.set('Content-Type', 'image/svg+xml');
     res.render('button.svg', req.params);
+});
+
+app.get('/v2/:username/qrcode.svg', function(req, res) {
+    var data = req.params;
+    var qr = new QrCode('https://gratipay.com/' + data.username + '/');
+
+    data.matrix = qr.getData();
+
+    res.set('Content-Type', 'image/svg+xml');
+    res.render('qrcode.svg', data);
 });
 
 function get(endpoint) {
