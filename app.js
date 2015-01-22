@@ -4,6 +4,7 @@ var request = require('request');
 var QrCode = require('javascript-qrcode').QrCode;
 var async = require('async');
 var im = require('imagemagick-stream');
+var cowsay = require('cowsay');
 var app = express();
 
 var port = process.env.PORT || 4000;
@@ -95,4 +96,11 @@ app.get('/v2/:username/:widget.png', function(req, res) {
         .pipe(res);
 });
 
-app.listen(port);
+app.listen(port, function() {
+    console.log(cowsay.say({
+        text: 'Widget server listening at http://localhost:' + port + '/',
+        f: 'stegosaurus'
+    }));
+});
+
+module.exports = app;

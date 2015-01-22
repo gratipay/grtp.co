@@ -8,6 +8,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "consolidate": "^0.10.0",
+    "cowsay": "^1.0.3",
     "express": "^4.10.6",
     "imagemagick-stream": "^1.1.0",
     "javascript-qrcode": "^1.0.7",
