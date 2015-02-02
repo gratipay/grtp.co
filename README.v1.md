@@ -1,12 +1,17 @@
-grtp.co [![Builds][]][Travis] [![Deps][]][Gemnasium]
+grtp.co [![Builds][]][Travis] [![Deps][]][Gemnasium] [![Tips][]][Gratipay]
 =======
 
 Gratipay widgets + widget API
+
+Source for v1 widgets are in [lib/v1](lib/v1) and [lib/v1.js](lib/v1.js), tests
+for v1 are in [test/v1](test/v1)
 
 [Builds]: http://img.shields.io/Travis-ci/gratipay/grtp.co.png "Build Status"
 [Travis]: https://travis-ci.org/gratipay/grtp.co
 [Deps]: https://Gemnasium.com/gratipay/grtp.co.png "Dependency Status"
 [Gemnasium]: https://gemnasium.com/gratipay/grtp.co
+[Tips]: https://img.shields.io/gratipay/gratipay.svg
+[Gratipay]: https://gratipay.com/Gratipay/
 
 ## Getting Started
 Quickstart:
@@ -90,41 +95,5 @@ widget's HTML, and the following classes:
 <img src="http://img.shields.io/gratipay/Gratipay.svg">
 ```
 
-
-## Deployment
-
-Grtp.co is hosted on a Digital Ocean droplet. It runs nginx and the publishing
-root is `/home/grtp.co/production`.
-
-To modify the nginx configuration, you need someone who already has access to
-add your key to `/root/.ssh/authorized_keys`. You'll find the config in
-`/etc/nginx/sites-enabled/grtp.co`. After you make changes, you can reload
-configuration in nginx like this:
-
-```
-# service nginx reload
-```
-
-To deploy, you need someone who already has access to add your key to
-`/home/grtp.co/.ssh/authorized_keys`. Then add the remote to your own local
-repo:
-
-```
-$ git remote add prod grtp@grtp.co:production
-```
-
-Then you can `git push prod`. There's a post-receive hook that updates the
-filesystem on the droplet and runs the grunt minify task.
-
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding
-style. Add unit tests for any new or changed functionality. Lint and test your
-code using [grunt](https://github.com/gruntjs/grunt).
-
-To help keep a consistent style, we also recommend using
-[EditorConfig](http://editorconfig.org).
-
-
-## License
-Released into the public domain (per CC0).
+# Misc
+For license, contributions, and deployment information, see [README.md](README.md)
