@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--
-This file is placed into Public Domain by
-anatoly techtonik <techtonik@gmail.com>
--->
 <Module>
   <ModulePrefs title="Gratipay" height="72" /> 
   <UserPref name="name" display_name="Name on Gratipay"/>
