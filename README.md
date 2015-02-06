@@ -16,7 +16,7 @@ $ cd grtp.co
 $ make run
 ```
 
-Then visit [http://localhost:9537/test/](http://localhost:9537/test/)
+Then visit <http://localhost:9537/test/>
 
 ## Documentation
 JSDoc comments are used, but documentation generation is not setup yet. The
