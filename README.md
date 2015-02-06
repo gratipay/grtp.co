@@ -16,8 +16,7 @@ $ cd grtp.co
 $ make run
 ```
 
-Then visit http://localhost:9537/test/
-
+Then visit <http://localhost:9537/test/>
 
 ## Documentation
 JSDoc comments are used, but documentation generation is not setup yet. The
@@ -90,6 +89,7 @@ widget's HTML, and the following classes:
 <img src="http://img.shields.io/gratipay/Gratipay.svg">
 ```
 
+[Blogger Gadget](lib/v1/blogger)
 
 ## Deployment
 
