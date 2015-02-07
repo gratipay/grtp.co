@@ -15,10 +15,10 @@ for me, so don't pay attention to it.
 
 # Google Code
 
-To add gadget to Google Code pages, use the following snippet:
+To add gadget to [Google Code pages](https://code.google.com/p/support/wiki/WikiSyntax#Gadgets), use the following snippet:
 
     <wiki:gadget url="https://grtp.co/v1/blogger/gratipay.xml" height="72" border="0"
-    up_name="techtonik" />
+    title="The economy of gratitude.." up_name="techtonik" />
 
 `up_name` is parameter that you need to set with your name.
 You can also specify `up_type="giving"` to get different widget
