@@ -89,7 +89,7 @@ widget's HTML, and the following classes:
 <img src="http://img.shields.io/gratipay/Gratipay.svg">
 ```
 
-[Blogger Gadget](lib/v1/blogger)
+[Google Gadget](lib/v1/blogger) for Blogger and Google Code.
 
 ## Deployment
 
