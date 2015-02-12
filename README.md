@@ -91,23 +91,31 @@ widget's HTML, and the following classes:
 
 [Google Gadget](lib/v1/blogger) for Blogger and Google Code.
 
-## Deployment
+## Release and Deployment
 
-Grtp.co is hosted on a Digital Ocean droplet. It runs nginx and the publishing
-root is `/home/grtp.co/production`. 
+Grtp.co is hosted on a Digital Ocean VPS (called `droplet`) accessible
+through SSH. It runs nginx and the publishing root is
+`/home/grtp.co/production`. 
 
-To modify the nginx configuration, you need someone who already has access to
-add your key to `/root/.ssh/authorized_keys`. You'll find the config in
-`/etc/nginx/sites-enabled/grtp.co`. After you make changes, you can reload
-configuration in nginx like this:
+To access the server, you need someone who already has access to add
+your key to `/home/grtp.co/.ssh/authorized_keys`
+
+#### Configure
+
+If you need to alter nginx configuration, it is stored at
+`/etc/nginx/sites-enabled/grtp.co`
+
+After you make changes, you can reload configuration:
 
 ```
 # service nginx reload
 ```
 
-To deploy, you need someone who already has access to add your key to
-`/home/grtp.co/.ssh/authorized_keys`. Then add the remote to your own local
-repo:
+#### Deploy
+
+Bump version in `package.json` and create new tag.
+
+Add the remote to your own local repo:
 
 ```
 $ git remote add prod grtp@grtp.co:production
