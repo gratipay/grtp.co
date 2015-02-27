@@ -57,6 +57,15 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+            main: {
+                cwd: 'lib/v1/blogger',
+                expand: true,  // required for cwd
+                src: '**/*',
+                dest: 'www/v1/blogger/',
+            },
+        },
+
         jshint: {
             gruntfile: 'Gruntfile.js',
             dist: 'lib/**/*.{js,json}',
@@ -89,9 +98,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-dalek');
 
-    grunt.registerTask('default', ['test', 'minify']);
-    grunt.registerTask('minify', ['uglify', 'htmlmin']);
+    grunt.registerTask('default', ['test', 'deploy']);
+    grunt.registerTask('deploy', ['uglify', 'htmlmin', 'copy']);
     grunt.registerTask('test', ['jshint', 'connect', 'dalek']);
 };

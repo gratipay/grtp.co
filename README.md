@@ -119,8 +119,8 @@ $ git remote add prod grtp@grtp.co:production
 ```
 
 Then you can `git push prod`. There's a post-receive hook that updates the
-filesystem on the droplet and runs the grunt `minify` task that deploys
-code by copying files from `lib` to `www` with some processing.
+filesystem on the droplet and runs the grunt `deploy` task that minifies
+code and copies files from `lib` to `www`.
 
 
 ## Contributing
