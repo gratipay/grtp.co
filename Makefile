@@ -1,13 +1,13 @@
 # `make` or `make all` will just pass through to grunt.
-# The default behavior for grunt is equivalent to `grunt test && grunt deploy`.
+# The default behavior for grunt is equivalent to `grunt test && grunt build`.
 all: node_modules
 	./node_modules/.bin/grunt
 
 run: node_modules
 	./node_modules/.bin/grunt connect:server:keepalive
 
-deploy: node_modules
-	./node_modules/.bin/grunt deploy
+build: node_modules
+	./node_modules/.bin/grunt build
 
 test: jstest
 

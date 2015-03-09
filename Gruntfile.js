@@ -101,7 +101,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-dalek');
 
-    grunt.registerTask('default', ['test', 'deploy']);
-    grunt.registerTask('deploy', ['uglify', 'htmlmin', 'copy']);
+    grunt.registerTask('default', ['test', 'build']);
+    grunt.registerTask('build', ['uglify', 'htmlmin', 'copy']);
     grunt.registerTask('test', ['jshint', 'connect', 'dalek']);
 };
