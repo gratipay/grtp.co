@@ -1,0 +1,11 @@
+#!/bin/sh
+cd ..
+# clean app all local changes
+env -i git reset --hard
+
+# wipe out node_modules and reinstall
+make clean
+make build
+
+# normalize permissions - shouldn't be needed, but here in case it becomes necessary
+# chmod -Rf g+w .
