@@ -89,7 +89,7 @@ widget's HTML, and the following classes:
 <img src="http://img.shields.io/gratipay/Gratipay.svg">
 ```
 
-[Google Gadget](lib/v1/blogger) for Blogger and Google Code.
+[Google Gadget](lib/v1/blogger) for Blogger.
 
 ## Release and Deployment
 Grtp.co is hosted on a Digital Ocean VPS (called `droplet`) accessible
