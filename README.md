@@ -106,20 +106,20 @@ widget's HTML, and the following classes:
 https://grtp.co/ is a static site. But it is generated from sources.
 
 Typical site like https://gratipay.com/ is divided into `backend` and
-`frontend` parts. `backend` is Python code that runs on server side.
-`frontend` is HTML+CSS+Javascript that is rendered by browser.
+`frontend`. `backend` is Python code that runs on server side.
+`frontend` is HTML+CSS+Javascript that is processed by browser.
 
-https://grtp.co/ is pure frontent, but its HTML+CSS+Javascript sources
-that are available in repository is not what is being run on the site.
-Before sources can be deployed, they need to be minified, and if you
-wryte styles in SASS, it needs to be compiled into CSS. So repository
-layout looks like:
+https://grtp.co/ is pure `frontend`, but its HTML+CSS+Javascript
+sources from repository are not what is being run on the site.
+Before sources can be deployed, they need to be minified, tested and,
+if you wryte styles in SASS, the .sass files need to be compiled into
+CSS. So repository layout looks like:
 
     lib/   - source files that need to be compiled
     www/   - static files that are copied as-is
 
 Javascript tools to build, lint and test source are similar to Python
-tools. Approximately this:
+tools. This can be matched approximately as this:
 
     JavaScript     |  Python
     --------------------------------------------------------
