@@ -16,8 +16,8 @@ var paths = {
 function lint() {
   return gulp.src(paths.scripts)
     .pipe(jshint())
-    //.pipe(jshint.reporter(stylish))
-    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('fail'))
     ;
 }
 
