@@ -16,7 +16,8 @@ var paths = {
 function lint() {
   return gulp.src(paths.scripts)
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+    //.pipe(jshint.reporter(stylish))
+    ;
 }
 
 // Watch files for changes to rerun tasks
