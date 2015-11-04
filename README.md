@@ -1,3 +1,4 @@
+
 grtp.co [![Builds][]][Travis] [![Deps][]][Gemnasium]
 =======
 
@@ -8,7 +9,9 @@ Gratipay widgets + widget API
 [Deps]: https://Gemnasium.com/gratipay/grtp.co.png "Dependency Status"
 [Gemnasium]: https://gemnasium.com/gratipay/grtp.co
 
-## Getting Started
+
+## Getting Started with Development
+
 Quickstart:
 ```
 $ git clone git@github.com:gratipay/grtp.co.git
@@ -16,11 +19,14 @@ $ cd grtp.co
 $ make run
 ```
 
-Then visit <http://localhost:9537/test/>
+Then visit <http://localhost:9537/test/>. For more details, read
+Development section below.
+
 
 ## Documentation
-JSDoc comments are used, but documentation generation is not setup yet. The
-code is documented, please dive in.
+
+For now ocumentation for widgets API is present in JSDoc comments,
+but not generated into more readable format.
 
 Configuration options:
 - `window.grtpAPI` - Where to look for the grtp.co API
@@ -28,7 +34,9 @@ Configuration options:
 - `window.gratipayURI` - Where to look for Gratipay
   - defaults to `https://gratipay.com/`
 
+
 ## Examples
+
 In the following examples, just switch out `rummik` with your Gratipay username.
 
 ### Standard Widgets
@@ -84,6 +92,7 @@ widget's HTML, and the following classes:
 
 
 ## Other Widgets
+
 [Shields.io](http://shields.io): [![](http://img.shields.io/gratipay/Gratipay.svg)](http://shields.io)
 ```html
 <img src="http://img.shields.io/gratipay/Gratipay.svg">
@@ -91,7 +100,43 @@ widget's HTML, and the following classes:
 
 [Google Gadget](lib/v1/blogger) for Blogger.
 
-## Release and Deployment
+
+## Development
+
+https://grtp.co/ is a static site. But it is generated from sources.
+
+Typical site like https://gratipay.com/ is divided into `backend` and
+`frontend`. `backend` is Python code that runs on server side.
+`frontend` is HTML+CSS+Javascript that is processed by browser.
+
+https://grtp.co/ is pure `frontend`, but its HTML+CSS+Javascript
+sources from repository are not what is being run on the site.
+Before sources can be deployed, they need to be minified, tested and,
+if you wryte styles in SASS, the .sass files need to be compiled into
+CSS. So repository layout looks like:
+
+    lib/   - source files that need to be compiled
+    www/   - static files that are copied as-is
+
+Javascript tools to build, lint and test source are similar to Python
+tools. This can be matched approximately as this:
+
+    JavaScript     |  Python
+    --------------------------------------------------------
+    npm            |  pip
+    package.json   |  setup.py, setup.cfg, requirements.txt
+    Grunt          |  make, fabric, SCons
+    Gruntfile.js   |  Makefile, fabfile.py, SConstruct
+
+Grunt is popular JS build systems, and there are many others, like
+Gulp for example. It should be noted that `npm` itself has some kind
+of dependency management, so you may not need Grunt at all.
+
+http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/ 
+
+
+### Release and Deployment
+
 Grtp.co is hosted on a Digital Ocean VPS (called `droplet`) accessible
 through SSH. It runs nginx and the publishing root is
 `/home/grtp.co/production`. 
@@ -110,6 +155,7 @@ After you make changes, you can reload configuration:
 ```
 
 #### Deploy
+
 Bump version in `package.json` and create new tag.
 
 Add the remote to your own local repo:
@@ -124,6 +170,7 @@ code and copies files from `lib` to `www`.
 
 
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
 code using [grunt](https://github.com/gruntjs/grunt).
@@ -133,4 +180,5 @@ To help keep a consistent style, we also recommend using
 
 
 ## License
+
 Released into the public domain (per CC0).

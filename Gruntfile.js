@@ -1,3 +1,7 @@
+// Following the tutorial http://www.smashingmagazine.com/2013/10/get-up-running-grunt/
+// trying to understand what is going on here.
+// Better clarified by http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
+
 module.exports = function(grunt) {
     'use strict';
 
