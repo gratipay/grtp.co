@@ -22,7 +22,7 @@ function lint() {
     // To have the process exit with an error code (1) after
     // lint errors, return the stream and pipe to failAfterError
     // last. 
-    .pipe(eslint.failAfterError())
+    //.pipe(eslint.failAfterError())
     ;
 }
 
