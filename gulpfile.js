@@ -3,6 +3,7 @@
 
 var gulp   = require('gulp');
 var eslint = require('gulp-eslint');
+var formatter = require('eslint-friendly-formatter')
 
 var paths = {
     scripts: [
@@ -18,7 +19,7 @@ function lint() {
         // of the file object so it can be used by other modules. 
         .pipe(eslint())
         // eslint.format() outputs the lint results to the console. 
-        .pipe(eslint.format())
+        .pipe(eslint.format(formatter))
         // To have the process exit with an error code (1) after
         // lint errors, return the stream and pipe to failAfterError
         // last. 

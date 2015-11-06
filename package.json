@@ -35,7 +35,8 @@
     "dalekjs": "0.0.8",
     "grunt-cli": "~0.1.13",
     "gulp": "git://github.com/gulpjs/gulp#4.0",
-    "gulp-eslint": "~1.0.0"
+    "gulp-eslint": "~1.0.0",
+    "eslint-friendly-formatter": "~1.2.2"
   },
   "keywords": [],
   "devDependencies": {
