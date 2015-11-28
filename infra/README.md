@@ -8,7 +8,8 @@ The system-application layout is following:
 
     /etc/nginx/sites-enabled/grtp.co  - nginx config
     /home/grtp.co/production          - code checkout
-      \__ .git/hooks/post-receive     - auto-update script
+                    .git/hooks/post-receive
+                                      - auto-update script
 
 Then use root/sudo to **create
 user `grtp`** with **home at `grtp.co`** and install
