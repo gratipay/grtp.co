@@ -1,9 +1,13 @@
 ##### grtp.co server setup
 
-**with root:**
+grtp.co is hosted on Digital Ocean servers (called
+`droplets`). So you need to create `droplet` and login
+through SSH to contibue. Then use root/sudo to **create
+user `grtp`** with **home at `grtp.co`** and install
+required packages - **nginx**, **git**.
 
-1. create user `grtp` with `grtp.co` home
-2. install nginx git
+    adduser grtp --home=/home/grtp.co --disabled-password
+    apt-get install nginx git
 
 **with new grtp user:**
 
