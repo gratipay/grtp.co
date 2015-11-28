@@ -6,7 +6,7 @@ through SSH to contibue. Then use root/sudo to **create
 user `grtp`** with **home at `grtp.co`** and install
 required packages - **nginx**, **git**.
 
-    adduser grtp --home=/home/grtp.co --disabled-password
+    adduser grtp --home=/home/grtp.co --disabled-password --gecos ""
     apt-get install nginx git
 
 **with new grtp user:**
