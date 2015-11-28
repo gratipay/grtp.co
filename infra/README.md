@@ -2,20 +2,31 @@
 
 grtp.co is hosted on Digital Ocean servers (called
 `droplets`). So you need to create `droplet` and login
-through SSH to contibue. Then use root/sudo to **create
+through SSH to continue.
+
+The system-application layout is following:
+
+    /etc/nginx/sites-enabled/grtp.co  - nginx config
+    /home/grtp.co/production          - code checkout
+      \__ .git/hooks/post-receive     - auto-update script
+
+Then use root/sudo to **create
 user `grtp`** with **home at `grtp.co`** and install
 required packages - **nginx**, **git**.
 
     adduser grtp --home=/home/grtp.co --disabled-password --gecos ""
     apt-get install nginx git
+    
+    # now log into grtp user
+    su grtp
 
-**with new grtp user:**
+With new `grtp` user:
 
-1. git clone https://github.com/gratipay/grtp.co.git production
-2. cd production
-...
+    cd ~
+    git clone https://github.com/gratipay/grtp.co.git production
+    cd production
 
-setup for automatic update on push:
+setup automatic update on push:
 
-3. cp infra/post-receive .git/hooks/
-4. chmod +x .git/hooks/post-receive
+    cp infra/post-receive .git/hooks/
+    chmod +x .git/hooks/post-receive
