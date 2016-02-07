@@ -1,0 +1,5 @@
+{
+    "error_code": 400,
+    "error_message_long": "Missing key: u'username'",
+    "error_message_short": "Bad Request"
+}
