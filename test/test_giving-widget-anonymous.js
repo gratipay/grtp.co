@@ -17,7 +17,7 @@ module.exports = {
             .assert.exists('iframe')
             .toFrame('iframe')
                 .assert.exists('.gratipay-giving')
-                .assert.text('.gratipay-giving').is('null', 'giving should not be empty')
+                .assert.text('.gratipay-giving').is('anonymously', 'giving should not be empty')
             .toParent()
             .done();
     },
