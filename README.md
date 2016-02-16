@@ -1,13 +1,11 @@
 
-grtp.co [![Builds][]][Travis] [![Deps][]][Gemnasium]
+grtp.co [![Builds][]][Travis]
 =======
 
 Gratipay widgets + widget API
 
-[Builds]: http://img.shields.io/Travis-ci/gratipay/grtp.co.png "Build Status"
+[Builds]: https://img.shields.io/travis/gratipay/grtp.co.svg "Build Status"
 [Travis]: https://travis-ci.org/gratipay/grtp.co
-[Deps]: https://Gemnasium.com/gratipay/grtp.co.png "Dependency Status"
-[Gemnasium]: https://gemnasium.com/gratipay/grtp.co
 
 
 ## Getting Started with Development
@@ -112,7 +110,7 @@ Typical site like https://gratipay.com/ is divided into `backend` and
 https://grtp.co/ is pure `frontend`, but its HTML+CSS+Javascript
 sources from repository are not what is being run on the site.
 Before sources can be deployed, they need to be minified, tested and,
-if you wryte styles in SASS, the .sass files need to be compiled into
+if you write styles in SASS, the .sass files need to be compiled into
 CSS. So repository layout looks like:
 
     lib/   - source files that need to be compiled
