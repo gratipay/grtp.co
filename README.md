@@ -139,20 +139,17 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 Grtp.co is hosted on a Digital Ocean VPS (called `droplet`) accessible
 through SSH. It runs nginx and the publishing root is
-`/home/grtp.co/production`. 
+`/home/grtp.co/production/www`.
 
 To access the server, you need someone who already has access to add
 your key to `/home/grtp.co/.ssh/authorized_keys`
 
-#### Configure
-If you need to alter nginx configuration, it is stored at
-`/etc/nginx/sites-enabled/grtp.co`
-
-After you make changes, you can reload configuration:
-
-```
-# service nginx reload
-```
+Look in the `infra/` directory in this repo for deployment files. In
+production,
+[`infra/nginx.conf`](https://github.com/gratipay/grtp.co/blob/master/infra/nginx.conf)
+in symlinked to `/etc/nginx/sites-enabled/grtp.co`, and
+[`infra/post-receive`](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive)
+to `/home/grtp.co/production/.git/hooks/post-receive`.
 
 #### Deploy
 
@@ -164,9 +161,11 @@ Add the remote to your own local repo:
 $ git remote add prod grtp@grtp.co:production
 ```
 
-Then you can `git push prod`. There's a post-receive hook that updates the
-filesystem on the droplet and runs the grunt `build` task that minifies
-code and copies files from `lib` to `www`.
+Then you can `git push prod`. The [`post-receive`
+hook](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive) will
+update the filesystem on the droplet and runs the grunt `build` task that
+minifies code and copies files from `lib` to `www`, and then it will reload
+nginx configuration.
 
 
 ## Contributing
