@@ -1,13 +1,11 @@
 
-grtp.co [![Builds][]][Travis] [![Deps][]][Gemnasium]
+grtp.co [![Builds][]][Travis]
 =======
 
 Gratipay widgets + widget API
 
-[Builds]: http://img.shields.io/Travis-ci/gratipay/grtp.co.png "Build Status"
+[Builds]: https://img.shields.io/travis/gratipay/grtp.co.svg "Build Status"
 [Travis]: https://travis-ci.org/gratipay/grtp.co
-[Deps]: https://Gemnasium.com/gratipay/grtp.co.png "Dependency Status"
-[Gemnasium]: https://gemnasium.com/gratipay/grtp.co
 
 
 ## Getting Started with Development
@@ -112,7 +110,7 @@ Typical site like https://gratipay.com/ is divided into `backend` and
 https://grtp.co/ is pure `frontend`, but its HTML+CSS+Javascript
 sources from repository are not what is being run on the site.
 Before sources can be deployed, they need to be minified, tested and,
-if you wryte styles in SASS, the .sass files need to be compiled into
+if you write styles in SASS, the .sass files need to be compiled into
 CSS. So repository layout looks like:
 
     lib/   - source files that need to be compiled
@@ -139,20 +137,17 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 Grtp.co is hosted on a Digital Ocean VPS (called `droplet`) accessible
 through SSH. It runs nginx and the publishing root is
-`/home/grtp.co/production`. 
+`/home/grtp.co/production/www`.
 
 To access the server, you need someone who already has access to add
 your key to `/home/grtp.co/.ssh/authorized_keys`
 
-#### Configure
-If you need to alter nginx configuration, it is stored at
-`/etc/nginx/sites-enabled/grtp.co`
-
-After you make changes, you can reload configuration:
-
-```
-# service nginx reload
-```
+Look in the `infra/` directory in this repo for deployment files. In
+production,
+[`infra/nginx.conf`](https://github.com/gratipay/grtp.co/blob/master/infra/nginx.conf)
+in symlinked to `/etc/nginx/sites-enabled/grtp.co`, and
+[`infra/post-receive`](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive)
+to `/home/grtp.co/production/.git/hooks/post-receive`.
 
 #### Deploy
 
@@ -164,9 +159,11 @@ Add the remote to your own local repo:
 $ git remote add prod grtp@grtp.co:production
 ```
 
-Then you can `git push prod`. There's a post-receive hook that updates the
-filesystem on the droplet and runs the grunt `build` task that minifies
-code and copies files from `lib` to `www`.
+Then you can `git push prod`. The [`post-receive`
+hook](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive) will
+update the filesystem on the droplet and runs the grunt `build` task that
+minifies code and copies files from `lib` to `www`, and then it will reload
+nginx configuration.
 
 
 ## Contributing

@@ -7,5 +7,5 @@ env -i git reset --hard
 make clean
 make build
 
-# normalize permissions - shouldn't be needed, but here in case it becomes necessary
-# chmod -Rf g+w .
+# reload configuration
+service nginx reload
