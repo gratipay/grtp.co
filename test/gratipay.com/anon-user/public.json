@@ -1,19 +1,35 @@
 {
-    "avatar": "https://avatars.githubusercontent.com/u/3893573?s=128",
+    "avatar": "https://avatars.githubusercontent.com/u/3893573?s=160",
+    "cryptocoins": {
+        "bitcoin": "3MNVEUyqYqnxF5jKBbfKRrWp5XYRDSjzDs"
+    },
     "elsewhere": {
+        "bountysource": {
+            "id": 481481,
+            "user_id": "24752",
+            "user_name": null
+        },
         "github": {
             "id": 205991,
             "user_id": "3893573",
             "user_name": "rohitpaulk"
+        },
+        "google": {
+            "id": 476989,
+            "user_id": "103133617858201182649",
+            "user_name": "PaulKuruvilla"
+        },
+        "twitter": {
+            "id": 473541,
+            "user_id": "1079733008",
+            "user_name": "RohitPaulK"
         }
     },
-    "giving": null,
-    "goal": null,
+    "giving": "anonymously",
     "id": 145878,
-    "my_tip": "self",
-    "npatrons": 0,
-    "number": "singular",
+    "ngiving_to": 24,
+    "ntaking_from": 0,
     "on": "gratipay",
-    "receiving": null,
+    "taking": "0.00",
     "username": "rohitpaulk"
 }

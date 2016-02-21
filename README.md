@@ -65,7 +65,6 @@ widget's HTML, and the following classes:
 - Text
   - `gratipay-receiving` - dollar-sign prefixed value of `receiving`
   - `gratipay-username` - the user's username
-  - `gratipay-goal` - dollar-sign prefixed value of `goal`
   - `gratipay-giving` - dollar-sign prefixed value of `giving`
   - `gratipay-identity` - `I` if `number` is `singular`, `We` if `number` is
     `plural`
@@ -73,9 +72,6 @@ widget's HTML, and the following classes:
   - `gratipay-profile-link` - sets the `href` attribute to the user's profile
     link
   - `gratipay-link` - sets the `href` attribute to https://gratipay.com/
-- Misc styling
-  - `gratipay-goal-progress-bar` - sets the element's width to a percentage value
-    of the user's goal progress
 
 
 ```html
@@ -130,7 +126,7 @@ Grunt is popular JS build systems, and there are many others, like
 Gulp for example. It should be noted that `npm` itself has some kind
 of dependency management, so you may not need Grunt at all.
 
-http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/ 
+http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 
 ### Release and Deployment
