@@ -11,8 +11,5 @@ get gratipay/charts.json
 get rummik/public.json
 get rummik/charts.json
 
-get rummik/public.json
-get rummik/charts.json
-
 get northern-plains-athletics/public.json
 get northern-plains-athletics/charts.json
