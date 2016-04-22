@@ -8,5 +8,5 @@ module.exports = {
             .assert.attr('[data-gratipay-username]', 'data-gratipay-readystatus').is('ready', 'readystatus should be ready')
             .done();
     }
-	
+
 };
