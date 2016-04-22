@@ -18,8 +18,8 @@ module.exports = {
             .toFrame('iframe')
                 .assert.exists('.gratipay-identity')
                 .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
-                .assert.exists('.gratipay-receiving')
-                .assert.text('.gratipay-receiving').is.not('', 'receiving should not be empty')
+                .assert.exists('.gratipay-taking')
+                .assert.text('.gratipay-taking').is.not('', 'taking should not be empty')
             .toParent()
             .done();
     },
