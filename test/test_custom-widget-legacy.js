@@ -17,7 +17,7 @@ module.exports = {
             .assert.text('.gittip-username').is.not('', 'username should not be empty')
             .assert.text('.gittip-identity').is.not('', 'identity should not be empty')
             .assert.text('.gittip-giving').is.not('', 'giving should not be empty')
-            .assert.text('.gittip-receiving').is.not('', 'receiving should not be empty')
+            .assert.text('.gittip-taking').is.not('', 'taking should not be empty')
             .assert.text('.gittip-goal').is.not('', 'goal should not be empty')
             .done();
     },
