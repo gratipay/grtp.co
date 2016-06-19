@@ -1,6 +1,6 @@
 module.exports = {
 
-    'default-widget-anonymous: readystatus should be ready': function(test) {
+    'v2 default-widget-anonymous: readystatus should be ready': function(test) {
         test.open('http://localhost:9537/test/v2/default-widget-anonymous.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
@@ -9,7 +9,7 @@ module.exports = {
             .done();
     },
 
-    'default-widget-anonymous: it should show anonymous receiving': function(test) {
+    'v2 default-widget-anonymous: it should show anonymous receiving': function(test) {
         test.open('http://localhost:9537/test/v2/default-widget-anonymous.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
