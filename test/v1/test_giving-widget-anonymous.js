@@ -1,7 +1,7 @@
 module.exports = {
 
-    'giving-widget-anonymous: readystatus should be ready': function(test) {
-        test.open('http://localhost:9537/test/giving-widget-anonymous.html')
+    'v1 giving-widget-anonymous: readystatus should be ready': function(test) {
+        test.open('http://localhost:9537/test/v1/giving-widget-anonymous.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
@@ -9,8 +9,8 @@ module.exports = {
             .done();
     },
 
-    'giving-widget-anonymous: it should show anonymous giving': function(test) {
-        test.open('http://localhost:9537/test/giving-widget-anonymous.html')
+    'v1 giving-widget-anonymous: it should show anonymous giving': function(test) {
+        test.open('http://localhost:9537/test/v1/giving-widget-anonymous.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)

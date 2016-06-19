@@ -1,7 +1,7 @@
 module.exports = {
 
-    'default-widget: readystatus should be ready': function(test) {
-        test.open('http://localhost:9537/test/default-widget.html')
+    'v1 default-widget: readystatus should be ready': function(test) {
+        test.open('http://localhost:9537/test/v1/default-widget.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
@@ -9,8 +9,8 @@ module.exports = {
             .done();
     },
 
-    'default-widget: it should fill the standard values': function(test) {
-        test.open('http://localhost:9537/test/default-widget.html')
+    'v1 default-widget: it should fill the standard values': function(test) {
+        test.open('http://localhost:9537/test/v1/default-widget.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
