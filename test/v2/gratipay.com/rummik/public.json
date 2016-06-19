@@ -1,0 +1,32 @@
+{
+    "avatar": "https://www.gravatar.com/avatar/970cf49bc983bc884c37a29710260aa9",
+    "bitcoin": "http://blockchain.info/address/19sNZKMYMUCE7U8FH7FkfVjBr7Cu5ffeEg",
+    "elsewhere": {
+        "bitbucket": {
+            "id": 70345,
+            "user_id": "rummik",
+            "user_name": "rummik"
+        },
+        "bountysource": {
+            "id": 121894,
+            "user_id": "17855",
+            "user_name": "rummik"
+        },
+        "github": {
+            "id": 42748,
+            "user_id": "630909",
+            "user_name": "rummik"
+        },
+        "twitter": {
+            "id": 51466,
+            "user_id": "214136763",
+            "user_name": "iotasamurai"
+        }
+    },
+    "giving": "1.61",
+    "goal": "250.00",
+    "id": 16757,
+    "number": "singular",
+    "receiving": "18.25",
+    "username": "rummik"
+}
