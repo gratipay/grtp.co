@@ -5,7 +5,7 @@ module.exports = {
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
-            .assert.attr('[data-gratipay-username]', 'data-gratipay-readystatus').is('ready', 'readystatus should be ready')
+            .assert.attr('[data-gratipay-teamslug]', 'data-gratipay-readystatus').is('ready', 'readystatus should be ready')
             .done();
     },
 
@@ -18,8 +18,8 @@ module.exports = {
             .toFrame('iframe')
                 .assert.exists('.gratipay-identity')
                 .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
-                .assert.exists('.gratipay-taking')
-                .assert.text('.gratipay-taking').is.not('', 'taking should not be empty')
+                .assert.exists('.gratipay-receiving')
+                .assert.text('.gratipay-receiving').is.not('', 'taking should not be empty')
             .toParent()
             .done();
     },
