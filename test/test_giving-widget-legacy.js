@@ -1,6 +1,6 @@
 module.exports = {
 
-    'readystatus should be ready': function(test) {
+    'giving-widget-legacy: readystatus should be ready': function(test) {
         test.open('http://localhost:9537/test/giving-widget-legacy.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
@@ -9,7 +9,7 @@ module.exports = {
             .done();
     },
 
-    'it should fill the standard values': function(test) {
+    'giving-widget-legacy: it should fill the standard values': function(test) {
         test.open('http://localhost:9537/test/giving-widget-legacy.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
