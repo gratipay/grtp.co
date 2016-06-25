@@ -16,7 +16,6 @@ module.exports = {
             }, [], 2000)
             .assert.text('.gratipay-teamslug').is.not('', 'username should not be empty')
             .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
-            .assert.text('.gratipay-giving').is.not('', 'giving should not be empty')
             .assert.text('.gratipay-receiving').is.not('', 'taking should not be empty')
             .assert.text('.gratipay-goal').is.not('', 'goal should not be empty')
             .done();
