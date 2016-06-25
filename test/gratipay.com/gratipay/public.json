@@ -1,0 +1,11 @@
+{
+    "homepage": "https://gratipay.com/",
+    "name": "Gratipay",
+    "nreceiving_from": 387,
+    "onboarding_url": "http://inside.gratipay.com/big-picture/welcome",
+    "owner": "~Gratipay",
+    "receiving": 267.35,
+    "slug": "Gratipay",
+    "status": "approved",
+    "todo_url": "https://github.com/search?q=is%3Aopen+user%3Agratipay&type=Issues"
+}

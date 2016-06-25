@@ -18,7 +18,6 @@ module.exports = {
             .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
             .assert.text('.gratipay-giving').is.not('', 'giving should not be empty')
             .assert.text('.gratipay-receiving').is.not('', 'receiving should not be empty')
-            .assert.text('.gratipay-goal').is.not('', 'goal should not be empty')
             .done();
     },
 
