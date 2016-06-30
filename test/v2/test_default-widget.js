@@ -16,8 +16,6 @@ module.exports = {
             }, [], 2000)
             .assert.exists('iframe')
             .toFrame('iframe')
-                .assert.exists('.gratipay-identity')
-                .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
                 .assert.exists('.gratipay-receiving')
                 .assert.text('.gratipay-receiving').is.not('', 'taking should not be empty')
             .toParent()

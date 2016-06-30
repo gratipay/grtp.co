@@ -15,7 +15,6 @@ module.exports = {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
             .assert.text('.gratipay-teamslug').is.not('', 'username should not be empty')
-            .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
             .assert.text('.gratipay-receiving').is.not('', 'taking should not be empty')
             .done();
     },

@@ -66,8 +66,6 @@ widget's HTML, and the following classes:
   - `gratipay-receiving` - dollar-sign prefixed value of `receiving`
   - `gratipay-username` - the user's username
   - `gratipay-giving` - dollar-sign prefixed value of `giving`
-  - `gratipay-identity` - `I` if `number` is `singular`, `We` if `number` is
-    `plural`
 - Links
   - `gratipay-profile-link` - sets the `href` attribute to the user's profile
     link
