@@ -129,6 +129,45 @@ in symlinked to `/etc/nginx/sites-enabled/grtp.co`, and
 [`infra/post-receive`](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive)
 to `/home/grtp.co/production/.git/hooks/post-receive`.
 
+
+#### Initial Server Setup
+
+The system-application layout is following:
+
+```
+/etc/nginx/sites-enabled/grtp.co  - nginx config
+/home/grtp.co/production          - code checkout
+                .git/hooks/post-receive
+                                  - auto-update script
+```
+
+Then use root/sudo to **create user `grtp`** with **home at `grtp.co`** and
+install required packages - **nginx**, **git**.
+
+```
+adduser grtp --home=/home/grtp.co --disabled-password --gecos ""
+apt-get install nginx git
+
+# now log into grtp user
+su grtp
+```
+
+With new `grtp` user:
+
+```
+cd ~
+git clone https://github.com/gratipay/grtp.co.git production
+cd production
+```
+
+Setup automatic update on push:
+
+```
+cp infra/post-receive .git/hooks/
+chmod +x .git/hooks/post-receive
+```
+
+
 #### Deploy
 
 Bump version in `package.json` and create new tag.
@@ -136,7 +175,7 @@ Bump version in `package.json` and create new tag.
 Add the remote to your own local repo:
 
 ```
-$ git remote add prod grtp@grtp.co:production
+git remote add prod grtp@grtp.co:production
 ```
 
 Then you can `git push prod`. The [`post-receive`
