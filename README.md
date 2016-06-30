@@ -65,7 +65,6 @@ widget's HTML, and the following classes:
 - Text
   - `gratipay-receiving` - dollar-sign prefixed value of `receiving`
   - `gratipay-username` - the user's username
-  - `gratipay-goal` - dollar-sign prefixed value of `goal`
   - `gratipay-giving` - dollar-sign prefixed value of `giving`
   - `gratipay-identity` - `I` if `number` is `singular`, `We` if `number` is
     `plural`
@@ -74,8 +73,6 @@ widget's HTML, and the following classes:
     link
   - `gratipay-link` - sets the `href` attribute to https://gratipay.com/
 - Misc styling
-  - `gratipay-goal-progress-bar` - sets the element's width to a percentage value
-    of the user's goal progress
 
 
 ```html
