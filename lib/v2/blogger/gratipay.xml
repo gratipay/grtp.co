@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Gratipay" height="72" /> 
-  <UserPref name="name" display_name="Name on Gratipay"/>
-  <UserPref name="type" display_name="Widget Type" default_value="default" datatype="enum" >
-    <EnumValue value="default" />
-    <EnumValue value="giving" />
-  </UserPref> 
+  <UserPref name="teamslug" display_name="Team slug on Gratipay"/>
   <Content type="html">
      <![CDATA[ 
-<script data-gratipay-username="__UP_name__"
-        data-gratipay-widget="__UP_type__"
-        src="//grtp.co/v1.js" async="true"></script>
+<script data-gratipay-teamslug="__UP_teamslug__"
+        src="//grtp.co/v2.js" async="true"></script>
      ]]>
   </Content> 
 </Module>
