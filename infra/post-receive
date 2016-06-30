@@ -1,5 +1,5 @@
 #!/bin/sh
-cd ..
+cd ../..
 # clean app all local changes
 env -i git reset --hard
 
