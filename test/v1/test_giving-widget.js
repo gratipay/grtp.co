@@ -1,7 +1,7 @@
 module.exports = {
 
-    'default-widget-anonymous: readystatus should be ready': function(test) {
-        test.open('http://localhost:9537/test/default-widget-anonymous.html')
+    'v1 giving-widget: readystatus should be ready': function(test) {
+        test.open('http://localhost:9537/test/v1/giving-widget.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
@@ -9,15 +9,17 @@ module.exports = {
             .done();
     },
 
-    'default-widget-anonymous: it should show anonymous receiving': function(test) {
-        test.open('http://localhost:9537/test/default-widget-anonymous.html')
+    'v1 giving-widget: it should fill the standard values': function(test) {
+        test.open('http://localhost:9537/test/v1/giving-widget.html')
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
             .assert.exists('iframe')
             .toFrame('iframe')
-                .assert.exists('.gratipay-receiving')
-                .assert.text('.gratipay-receiving').is('anonymously', 'receiving should not be empty')
+                .assert.exists('.gratipay-identity')
+                .assert.text('.gratipay-identity').is.not('', 'identity should not be empty')
+                .assert.exists('.gratipay-giving')
+                .assert.text('.gratipay-giving').is.not('', 'giving should not be empty')
             .toParent()
             .done();
     },

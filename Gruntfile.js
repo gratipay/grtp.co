@@ -63,10 +63,10 @@ module.exports = function(grunt) {
 
         copy: {
             main: {
-                cwd: 'lib/v1/blogger',
+                cwd: 'lib/v2/blogger',
                 expand: true,  // required for cwd
                 src: '**/*',
-                dest: 'www/v1/blogger/',
+                dest: 'www/v2/blogger/',
             },
         },
 
