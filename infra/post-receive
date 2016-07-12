@@ -1,6 +1,9 @@
 #!/bin/sh
-cd ../..
-# clean app all local changes
+
+# go to the repo root
+cd /home/grtp.co/production
+
+# clear out all local changes
 env -i git reset --hard
 
 # wipe out node_modules and reinstall
