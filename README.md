@@ -28,7 +28,7 @@ but not generated into more readable format.
 
 Configuration options:
 - `window.grtpAPI` - Where to look for the grtp.co API
-  - defaults to `//grtp.co/v2/`
+  - defaults to `https://grtp.co/v2/`
 - `window.gratipayURI` - Where to look for Gratipay
   - defaults to `https://gratipay.com/`
 
@@ -41,7 +41,7 @@ In the following examples, just switch out `my-team` with your Gratipay Team slu
 ![](https://cloud.githubusercontent.com/assets/3729038/16357975/9584b358-3acb-11e6-821c-ece9d855dca1.png)
 ```html
 <script data-gratipay-teamslug="my-team"
-  src="//grtp.co/v2.js" async></script>
+  src="https://grtp.co/v2.js" async></script>
 ```
 
 ### Custom Widgets
@@ -65,7 +65,7 @@ widget's HTML, and the following classes:
   </a>
   on <a class="gratipay-link">Gratipay</a>.
 </div>
-<script src="//grtp.co/v2.js"></script>
+<script src="https://grtp.co/v2.js"></script>
 ```
 
 
@@ -110,7 +110,7 @@ Grunt is popular JS build systems, and there are many others, like
 Gulp for example. It should be noted that `npm` itself has some kind
 of dependency management, so you may not need Grunt at all.
 
-http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/ 
+http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 
 ### Release and Deployment
