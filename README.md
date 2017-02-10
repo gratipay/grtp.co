@@ -69,12 +69,37 @@ widget's HTML, and the following classes:
 ```
 
 
-## Other Widgets
+## [Shields.io](http://shields.io)
 
-[Shields.io](http://shields.io): [![](http://img.shields.io/gratipay/Gratipay.svg)](http://shields.io)
+Shields can be created for ~users or projects:
+
+### Projects
+
 ```html
-<img src="http://img.shields.io/gratipay/Gratipay.svg">
+<img src="http://img.shields.io/gratipay/team/Gratipay.svg">
 ```
+
+```markdown
+[![](http://img.shields.io/gratipay/team/Gratipay.svg)]()
+```
+
+[![](http://img.shields.io/gratipay/team/Gratipay.svg)]()
+
+(Shields.io still uses "team" rather than "project.")
+
+### ~users
+
+```html
+<img src="http://img.shields.io/gratipay/user/zzzeek.svg">
+```
+
+```markdown
+[![](http://img.shields.io/gratipay/user/zzzeek.svg)]()
+```
+
+[![](http://img.shields.io/gratipay/user/zzzeek.svg)]()
+
+## Other Widgets
 
 [Google Gadget](lib/v2/blogger) for Blogger.
 
