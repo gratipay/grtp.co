@@ -2,7 +2,7 @@
 grtp.co [![Builds][]][Travis]
 =======
 
-Gratipay widgets + widget API
+Gratipay Widgets + API
 
 [Builds]: https://img.shields.io/travis/gratipay/grtp.co.svg "Build Status"
 [Travis]: https://travis-ci.org/gratipay/grtp.co

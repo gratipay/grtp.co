@@ -1,6 +1,6 @@
 {
   "name": "grtp.co",
-  "description": "Gratipay widgets.",
+  "description": "Gratipay Widgets + API",
   "version": "0.1.5",
   "homepage": "https://github.com/gratipay/grtp.co",
   "private": true,
@@ -26,7 +26,9 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt test --verbose"
+    "build": "grunt build",
+    "start": "grunt connect:server:keepalive",
+    "test": "grunt test"
   },
   "dependencies": {
     "grunt": "~0.4.4",

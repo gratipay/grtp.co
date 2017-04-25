@@ -1,13 +1,12 @@
 # `make` or `make all` will just pass through to grunt.
 # The default behavior for grunt is equivalent to `grunt test && grunt build`.
-all: node_modules
-	./node_modules/.bin/grunt
+all: node_modules test build
 
 run: node_modules
-	./node_modules/.bin/grunt connect:server:keepalive
+	npm start
 
 build: node_modules
-	./node_modules/.bin/grunt build
+	npm run build
 
 test: jstest
 
@@ -18,7 +17,7 @@ node_modules: package.json
 	@if [ -d node_modules ]; then touch node_modules; fi
 
 jstest: node_modules
-	./node_modules/.bin/grunt test
+	npm test
 
 clean:
 	rm -rf node_modules
