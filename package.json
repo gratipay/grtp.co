@@ -28,7 +28,8 @@
   "scripts": {
     "build": "grunt build",
     "start": "grunt connect:server:keepalive",
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "make build"
   },
   "dependencies": {
     "grunt": "~0.4.4",
