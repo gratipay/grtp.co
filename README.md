@@ -140,74 +140,21 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 ### Release and Deployment
 
-Grtp.co is hosted on a Digital Ocean VPS (called `droplet`) accessible
-through SSH. It runs nginx and the publishing root is
-`/home/grtp.co/production/www`.
-
-To access the server, you need someone who already has access to add
-your key to `/home/grtp.co/.ssh/authorized_keys`
-
-Look in the `infra/` directory in this repo for deployment files. In
-production,
-[`infra/nginx.conf`](https://github.com/gratipay/grtp.co/blob/master/infra/nginx.conf)
-in symlinked to `/etc/nginx/sites-enabled/grtp.co`, and
-[`infra/post-receive`](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive)
-to `/home/grtp.co/production/.git/hooks/post-receive`.
-
-
-#### Initial Server Setup
-
-The system-application layout is following:
-
-```
-/etc/nginx/sites-enabled/grtp.co  - nginx config
-/home/grtp.co/production          - code checkout
-                .git/hooks/post-receive
-                                  - auto-update script
-```
-
-Then use root/sudo to **create user `grtp`** with **home at `grtp.co`** and
-install required packages - **nginx**, **git**.
-
-```
-adduser grtp --home=/home/grtp.co --disabled-password --gecos ""
-apt-get install nginx git
-
-# now log into grtp user
-su grtp
-```
-
-With new `grtp` user:
-
-```
-cd ~
-git clone https://github.com/gratipay/grtp.co.git production
-cd production
-```
-
-Setup automatic update on push:
-
-```
-cp infra/post-receive .git/hooks/
-chmod +x .git/hooks/post-receive
-```
-
+Grtp.co is hosted on Heroku. 
 
 #### Deploy
 
 Bump version in `package.json` and create new tag.
 
-Add the remote to your own local repo:
+Add the Heroku remote to your own local repo:
 
 ```
-git remote add prod grtp@grtp.co:production
+git remote add heroku https://git.heroku.com/grtp.git
 ```
 
-Then you can `git push prod`. The [`post-receive`
-hook](https://github.com/gratipay/grtp.co/blob/master/infra/post-receive) will
-update the filesystem on the droplet and runs the grunt `build` task that
-minifies code and copies files from `lib` to `www`, and then it will reload
-nginx configuration.
+Then you can `git push heroku master`. The `heroku/nodejs` buildpack will then
+`npm build` the sources and save them in www. `heroku-buildpack-static` takes 
+over and serves web requests from the `www` directory.
 
 
 ## Contributing
