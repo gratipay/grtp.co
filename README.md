@@ -152,9 +152,11 @@ Add the Heroku remote to your own local repo:
 git remote add heroku https://git.heroku.com/grtp.git
 ```
 
-Then you can `git push heroku master`. The `heroku/nodejs` buildpack will then
-`npm build` the sources and save them in www. `heroku-buildpack-static` takes 
-over and serves web requests from the `www` directory.
+Then you can `git push heroku master`. The
+[`heroku/nodejs`](https://github.com/heroku/heroku-buildpack-nodejs)
+buildpack will then `npm build` the sources and save them in [www/](www/).
+[`heroku-buildpack-static`](https://github.com/heroku/heroku-buildpack-static)
+takes over and serves web requests from the `www` directory.
 
 
 ## Contributing
