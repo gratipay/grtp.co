@@ -1,0 +1,39 @@
+server {
+        listen 80;
+
+        listen 443 ssl;
+
+        server_name www.grtp.co;
+        server_name gttp.co;
+        server_name www.gttp.co;
+
+        ssl_certificate certs/grtp.co.crt;
+        ssl_certificate_key certs/grtp.co.key;
+
+        return 302 $scheme://grtp.co$request_uri;
+}
+
+server {
+        listen 80 default;
+        listen 443 ssl;
+
+        server_name grtp.co;
+
+        ssl_certificate certs/grtp.co.crt;
+        ssl_certificate_key certs/grtp.co.key;
+
+        root /home/grtp.co/production/www;
+        index index.html;
+
+        autoindex on;
+        try_files $uri $uri/ =404;
+
+        location ~ (widgets/.*\.html|\.json)$ {
+                add_header Access-Control-Allow-Origin *;
+        }
+
+        include mime.types;
+        types {
+                text/markdown   md;
+        }
+}
