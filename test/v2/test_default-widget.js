@@ -5,7 +5,7 @@ module.exports = {
             .waitFor(function() {
                 return !!document.querySelector('[data-gratipay-readystatus="ready"]');
             }, [], 2000)
-            .assert.attr('[data-gratipay-teamslug]', 'data-gratipay-readystatus').is('ready', 'readystatus should be ready')
+            .assert.attr('[data-gratipay-projectslug]', 'data-gratipay-readystatus').is('ready', 'readystatus should be ready')
             .done();
     },
 
