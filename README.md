@@ -40,7 +40,7 @@ In the following examples, just switch out `my-project` with your Gratipay Proje
 ### Standard Widgets
 ![](https://cloud.githubusercontent.com/assets/3729038/16357975/9584b358-3acb-11e6-821c-ece9d855dca1.png)
 ```html
-<script data-gratipay-projectslug="my-project"
+<script data-gratipay-teamslug="my-project"
   src="https://grtp.co/v2.js" async></script>
 ```
 
@@ -49,7 +49,7 @@ You can create your own widgets by adding `data-gratipay-widget="custom"` to you
 widget's HTML, and the following classes:
 
 - Text
-  - `gratipay-projectslug` - the Project's slug
+  - `gratipay-teamslug` - the Project's slug
   - `gratipay-receiving` - dollar-sign prefixed value of `receiving`
 - Links
   - `gratipay-profile-link` - sets the `href` attribute to the Project's profile
@@ -59,7 +59,7 @@ widget's HTML, and the following classes:
 
 
 ```html
-<div data-gratipay-projectslug="my-project" data-gratipay-widget="custom">
+<div data-gratipay-teamslug="my-project" data-gratipay-widget="custom">
   I receive <a class="gratipay-profile-link">
     <span class="gratipay-receiving">$0.00</span> / wk
   </a>
