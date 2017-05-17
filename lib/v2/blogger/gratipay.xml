@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Gratipay" height="72" /> 
-  <UserPref name="projectslug" display_name="Project slug on Gratipay"/>
+  <UserPref name="teamslug" display_name="Project slug on Gratipay"/>
   <Content type="html">
      <![CDATA[ 
-<script data-gratipay-projectslug="__UP_projectslug__"
+<script data-gratipay-teamslug="__UP_teamslug__"
         src="//grtp.co/v2.js" async="true"></script>
      ]]>
   </Content> 
