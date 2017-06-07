@@ -9,5 +9,5 @@ Enter URL ('https://' prefix didn't work for me):
 
     grtp.co/v2/blogger/gratipay.xml
 
-Set your "Team slug on Gratipay" and view how it looks on your blog page.
+Set your "Project slug on Gratipay" and view how it looks on your blog page.
 Blogger preview didn't work correctly for me, so don't pay attention to it.
